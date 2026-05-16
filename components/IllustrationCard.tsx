@@ -1,0 +1,2 @@
+const safetyCaption='示意图仅用于帮助理解大致区域，不作为专业取穴或针刺操作依据。请勿自行针刺。';
+export default function IllustrationCard({src,alt,title,caption=safetyCaption}:{src:string;alt:string;title?:string;caption?:string}){return <figure className="rounded-2xl border border-pine/10 bg-white p-4 shadow-sm"><img src={src} alt={alt} className="mx-auto h-auto max-h-[420px] w-full object-contain"/>{title&&<figcaption className="mt-3 text-center text-sm font-bold text-pine">{title}</figcaption>}<p className="mt-2 text-center text-xs leading-6 text-ink/60">{caption}</p></figure>}
