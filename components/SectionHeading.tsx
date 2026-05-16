@@ -1,0 +1,1 @@
+export default function SectionHeading({eyebrow,title,children}:{eyebrow?:string;title:string;children?:React.ReactNode}){return <div className="mb-6"><p className="mb-2 text-sm font-semibold text-gold">{eyebrow}</p><h2 className="text-2xl font-bold text-pine md:text-3xl">{title}</h2>{children&&<p className="mt-3 max-w-3xl text-ink/70">{children}</p>}</div>}

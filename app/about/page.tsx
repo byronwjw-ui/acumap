@@ -1,0 +1,3 @@
+import Breadcrumbs from '@/components/Breadcrumbs';import SafetyNotice from '@/components/SafetyNotice';import { makeMetadata } from '@/lib/seo';
+export const metadata=makeMetadata('关于本站｜AcuPoint Atlas 穴位图谱','了解 AcuPoint Atlas 穴位图谱的定位：面向普通人的穴位知识科普网站。');
+export default function Page(){return <article className="prose prose-lg mx-auto max-w-4xl px-4 py-10"><Breadcrumbs items={[{label:'关于本站'}]}/><h1>关于本站</h1><p>AcuPoint Atlas 穴位图谱是一个面向普通人的穴位知识科普网站。</p><p>我们希望帮助用户看懂针灸医生常用的取穴逻辑，认识常见穴位、经络基础和安全按揉原则。</p><p>很多人在针灸后会好奇：为什么胃不舒服会取小腿和手臂的穴位？为什么头痛可能会按手上的合谷？为什么足三里这么常见？</p><p>本站希望用清晰、克制、负责任的方式解释这些问题。</p><p>但请注意，本站不提供诊断、治疗建议或针刺指导。针刺属于专业医疗技术，应由具备专业训练和合法资质的人士操作。</p><SafetyNotice/></article>}

@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Breadcrumbs({items}:{items:{label:string;href?:string}[]}){return <nav aria-label="面包屑" className="mb-6 text-sm text-ink/60"><ol className="flex flex-wrap gap-2"><li><Link href="/" className="hover:text-pine">首页</Link></li>{items.map((it,i)=><li key={it.label} className="flex gap-2"><span>/</span>{it.href&&i<items.length-1?<Link href={it.href} className="hover:text-pine">{it.label}</Link>:<span className="text-ink">{it.label}</span>}</li>)}</ol></nav>}

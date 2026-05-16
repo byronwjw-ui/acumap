@@ -1,0 +1,2 @@
+import { ShieldCheck } from 'lucide-react';
+export default function SafetyNotice({compact=false}:{compact?:boolean}){return <div className="rounded-2xl border border-gold/30 bg-[#fffaf0] p-4 text-ink shadow-sm"><div className="flex gap-3"><ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-pine"/><div><h2 className={`${compact?'text-base':'text-xl'} font-bold text-pine`}>安全第一</h2><p className={`${compact?'mt-1 text-sm':'mt-2'} leading-7`}>本站内容仅用于穴位知识科普与健康教育，不提供诊断或治疗建议。普通人可以了解穴位位置和传统用途，也可以在安全前提下进行轻柔按揉，但请勿自行针刺。若出现剧烈、持续、突发或反复加重的不适，请及时就医。</p></div></div></div>}

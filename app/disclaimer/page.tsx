@@ -1,0 +1,3 @@
+import Breadcrumbs from '@/components/Breadcrumbs';import { makeMetadata } from '@/lib/seo';
+export const metadata=makeMetadata('免责声明｜AcuPoint Atlas','AcuPoint Atlas 穴位图谱免责声明：本站仅用于一般知识科普和健康教育，不构成医疗建议。');
+export default function Page(){return <article className="prose prose-lg mx-auto max-w-4xl px-4 py-10"><Breadcrumbs items={[{label:'免责声明'}]}/><h1>免责声明</h1><p>AcuPoint Atlas 穴位图谱提供的所有内容仅用于一般知识科普、健康教育和传统针灸理论学习，不构成医疗建议、诊断、治疗方案或医患关系。</p><p>本站不会指导用户自行针刺，也不鼓励任何人在没有专业训练和合法资质的情况下进行针灸操作。</p><p>穴位按揉内容仅作为一般性健康科普参考，不保证适用于所有人。不同个体的身体状况、疾病背景、用药情况和风险因素不同，如有不适，应咨询医生、持证针灸师或其他合格医疗专业人士。</p><p>如果出现剧烈、持续、突发、反复加重或原因不明的症状，请及时前往正规医疗机构。紧急情况请立即拨打当地急救电话。</p><p>使用本站即表示你理解并同意：本站内容不能替代专业医疗判断，网站运营者不对用户基于本站内容进行的任何自行操作承担医疗后果。</p></article>}

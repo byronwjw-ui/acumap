@@ -1,0 +1,3 @@
+import type { Metadata } from 'next';import './globals.css';import SiteHeader from '@/components/SiteHeader';import SiteFooter from '@/components/SiteFooter';import { site } from '@/data/site';
+export const metadata: Metadata = { title: { default: site.title, template: '%s' }, description: site.description, openGraph:{title:site.title,description:site.description,locale:'zh_CN',type:'website'} };
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="zh-CN"><body className="min-h-screen font-sans antialiased"><SiteHeader/><main>{children}</main><SiteFooter/></body></html>}

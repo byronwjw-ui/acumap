@@ -1,0 +1,3 @@
+import Breadcrumbs from '@/components/Breadcrumbs';import MeridianCard from '@/components/MeridianCard';import { meridians } from '@/data/meridians';import { makeMetadata } from '@/lib/seo';
+export const metadata=makeMetadata('经络入门｜AcuPoint Atlas 穴位图谱','学习 6 条常见经络的基础概念、路径概览、常见主题和代表穴位。');
+export default function Page(){return <div className="mx-auto max-w-7xl px-4 py-10"><Breadcrumbs items={[{label:'经络入门'}]}/><h1 className="text-4xl font-bold text-pine">经络入门</h1><p className="mt-4 max-w-3xl leading-7 text-ink/70">经络内容属于传统中医理论学习框架，不能替代现代医学诊断。身体不适时，应结合专业医疗意见。</p><div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{meridians.map(m=><MeridianCard key={m.slug} meridian={m}/>)}</div></div>}

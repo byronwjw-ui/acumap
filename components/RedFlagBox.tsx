@@ -1,0 +1,2 @@
+import { AlertTriangle } from 'lucide-react';
+export default function RedFlagBox({items}:{items:string[]}){return <section className="rounded-2xl border border-danger/30 bg-dangerSoft p-5"><div className="mb-3 flex items-center gap-2"><AlertTriangle className="h-5 w-5 text-danger"/><h2 className="text-xl font-bold text-danger">什么时候必须及时就医？</h2></div><ul className="grid gap-2 sm:grid-cols-2">{items.map(i=><li key={i} className="list-inside list-disc text-ink/80">{i}</li>)}</ul><p className="mt-4 font-medium text-danger">如果你不确定症状是否严重，请优先咨询医生或前往正规医疗机构。</p></section>}
