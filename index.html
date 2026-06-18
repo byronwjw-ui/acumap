@@ -32,38 +32,33 @@ h1{font-size:38px;line-height:1.15;color:#1F4D3A;margin:0 0 16px;font-weight:800
 section{padding:50px 0;border-top:1px solid #e3ddd0}
 section:first-of-type{border-top:0}
 h2{font-size:28px;color:#1F4D3A;margin:0 0 14px;font-weight:800}
-h3{color:#1F4D3A;margin:24px 0 8px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-@media(max-width:820px){.cards{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.cards{grid-template-columns:1fr}}
-.card{background:#fff;border:1px solid #e3ddd0;border-radius:14px;padding:16px;display:block;color:inherit}
-.card:hover{box-shadow:0 8px 24px rgba(31,77,58,.1);text-decoration:none;transform:translateY(-1px);transition:.15s}
-.card .meta{font-size:11px;color:#C8A96A;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
-.card h4{margin:4px 0;color:#1F4D3A;font-size:16px}
-.card p{margin:6px 0 0;color:#5b6b63;font-size:13px}
+h3{color:#1F4D3A;margin:24px 0 8px;font-size:18px}
+h4{color:#1F4D3A;margin:18px 0 6px;font-size:16px}
 .notice{background:#fff8e6;border:1px solid #f1dca0;border-radius:14px;padding:14px 18px;color:#6b4f0f;margin:16px 0}
 .notice strong{color:#8a6411}
 .redflag{background:#fdecec;border:1px solid #f3b8b8;border-radius:14px;padding:14px 18px;color:#7a1f1f;margin:16px 0}
 .redflag strong{color:#a32626}
-.entry{background:#fff;border:1px solid #e3ddd0;border-radius:16px;padding:22px;margin:18px 0}
+.entry{background:#fff;border:1px solid #e3ddd0;border-radius:16px;padding:22px;margin:18px 0;scroll-margin-top:90px}
 .entry .meta{color:#C8A96A;font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
 .entry h3:first-of-type{margin-top:14px}
+.entry .title{font-size:22px;font-weight:800;color:#1F4D3A;margin:0 0 8px}
+.entry .subtitle{color:#5b6b63;font-size:14px;margin:0 0 10px}
 .kv{display:grid;grid-template-columns:120px 1fr;gap:6px 16px;margin:12px 0;background:#E8F1EC;border-radius:12px;padding:12px 16px}
 .kv dt{color:#1F4D3A;font-weight:600}
 .kv dd{margin:0}
 @media(max-width:520px){.kv{grid-template-columns:1fr}}
 .pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .pill{background:#E8F1EC;color:#1F4D3A;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tag{background:#E8F1EC;color:#1F4D3A;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:500}
 ul{margin:8px 0;padding-left:20px}
 li{margin:4px 0}
-.back{display:inline-block;margin:10px 0;color:#5b6b63;font-size:13px}
 footer.site{padding:30px 0 50px;color:#5b6b63;font-size:14px;border-top:1px solid #e3ddd0;background:#f3eedf}
 footer.site .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
 .toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:14px 0}
 .toc a{background:#fff;border:1px solid #e3ddd0;border-radius:10px;padding:8px 12px;font-size:13px;color:#1F4D3A}
 .toc a:hover{background:#E8F1EC;text-decoration:none}
+.backtop{display:inline-block;margin-top:10px;font-size:13px;color:#5b6b63}
 </style>
 </head>
 <body>
@@ -100,11 +95,10 @@ footer.site .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2
   </div>
 </section>
 
-<!-- SECTION: CONDITIONS_PLACEHOLDER -->
 <section id="conditions">
   <div class="container">
     <div class="eyebrow">CONDITIONS</div>
-    <h2>常见不适入口</h2>
+    <h2>常见不适</h2>
     <p style="color:#5b6b63">从普通人最关心的不适入手，理解针灸取穴的思路。所有内容仅供科普学习，不能替代医疗诊断。</p>
     <div class="toc">
       <a href="#c-stomach">胃不舒服</a>
@@ -116,64 +110,484 @@ footer.site .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2
       <a href="#c-menstrual">经期不适</a>
       <a href="#c-lowback">腰背酸痛</a>
     </div>
-    <p style="color:#5b6b63;font-size:13px;margin-top:10px">详细内容请滚动查看下方分节。</p>
+
+    <article class="entry" id="c-stomach">
+      <div class="meta">常见不适</div>
+      <div class="title">胃不舒服 / 胃痉挛</div>
+      <p class="subtitle">从胃部局部穴位、胃经远端穴位和前臂穴位，理解针灸处理胃部不适时的常见取穴思路。</p>
+      <p>胃部突然绞痛、痉挛样不适，可能与冷饮刺激、进食过快、压力、胃肠功能紊乱等因素有关。针灸医生通常不会只看疼痛局部，而会结合经络、体质、伴随症状和触诊情况综合判断。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">寒邪犯胃</span><span class="pill">胃气不和</span><span class="pill">脾胃虚寒</span><span class="pill">气机不畅</span><span class="pill">饮食积滞</span><span class="pill">情绪影响脾胃</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><strong>腹部穴位：</strong>接近胃肠区域，常用于解释局部调理思路（如<a href="#p-cv12">中脘</a>、<a href="#p-st25">天枢</a>）。</li>
+        <li><strong>手臂穴位：</strong>如<a href="#p-pc6">内关</a>，常与恶心、胸腹不适和紧张相关问题联系在一起。</li>
+        <li><strong>小腿穴位：</strong>如<a href="#p-st36">足三里</a>属于胃经，是消化相关内容中非常常见的穴位。</li>
+        <li><strong>脚部穴位：</strong>如<a href="#p-sp4">公孙</a>、<a href="#p-lr3">太冲</a>，用于解释经络远端取穴和整体调节。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul>
+        <li>可轻柔按揉足三里、内关等区域</li>
+        <li>腹部按揉要轻柔，避免饭后立即强力按压</li>
+        <li>以舒适、轻微酸胀为度</li>
+        <li>不要自行针刺</li>
+      </ul>
+      <div class="redflag"><strong>🚨 出现以下情况应及时就医：</strong><ul style="margin-top:8px"><li>剧烈腹痛</li><li>持续不缓解</li><li>发烧</li><li>反复呕吐</li><li>呕血、黑便</li><li>胸痛、呼吸困难</li><li>晕厥</li><li>怀孕期间腹痛</li><li>右下腹持续疼痛</li><li>老人或儿童突发腹痛</li></ul></div>
+      <div class="tags"><span class="tag">胃</span><span class="tag">腹痛</span><span class="tag">消化</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-nausea">
+      <div class="meta">常见不适</div>
+      <div class="title">恶心反胃</div>
+      <p class="subtitle">理解内关、足三里、中脘和公孙在恶心反胃相关传统讨论中的位置。</p>
+      <p>恶心反胃可与饮食、晕车、压力、胃肠功能紊乱或其他健康问题有关。反复或严重呕吐需先考虑医学评估。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">胃气上逆</span><span class="pill">饮食不和</span><span class="pill">痰湿中阻</span><span class="pill">情绪影响脾胃</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><strong>前臂内关：</strong><a href="#p-pc6">内关</a>传统上常与恶心、胸腹不适和紧张感联系在一起。</li>
+        <li><strong>局部腹部：</strong><a href="#p-cv12">中脘</a>接近胃部区域。</li>
+        <li><strong>远端穴位：</strong><a href="#p-st36">足三里</a>、<a href="#p-sp4">公孙</a>体现胃经远端取穴。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>轻柔按揉内关区域</li><li>保持呼吸平稳</li><li>腹部力度要轻</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应及时就医：</strong><ul style="margin-top:8px"><li>频繁呕吐</li><li>无法进水</li><li>脱水表现</li><li>呕血、黑便</li><li>怀孕期间剧烈呕吐</li><li>伴随剧烈腹痛或胸痛</li></ul></div>
+      <div class="tags"><span class="tag">恶心</span><span class="tag">反胃</span><span class="tag">晕车</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-headache">
+      <div class="meta">常见不适</div>
+      <div class="title">头痛</div>
+      <p class="subtitle">从合谷、太冲、风池、百会理解头痛相关的远端和局部取穴思路。</p>
+      <p>头痛原因很多，可能与睡眠、压力、颈肩紧张、感染或神经血管问题有关。突发或异常头痛不能自行处理。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">风邪上扰</span><span class="pill">肝阳偏亢</span><span class="pill">气血不畅</span><span class="pill">颈项紧张</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><strong>手部远端：</strong><a href="#p-li4">合谷</a>说明远端取穴思路。</li>
+        <li><strong>足部远端：</strong><a href="#p-lr3">太冲</a>与情绪、肝阳相关。</li>
+        <li><strong>局部颈项：</strong><a href="#p-gb20">风池</a>接近头颅底部。</li>
+        <li><strong>头顶：</strong><a href="#p-gv20">百会</a>督脉代表穴。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>轻柔按揉手部、足部或后颈周围</li><li>颈部不要强力按压</li><li>头晕或疼痛加重时停止</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应及时就医：</strong><ul style="margin-top:8px"><li>突发剧烈头痛</li><li>伴随肢体无力、说话不清</li><li>高烧、颈项强直</li><li>视物模糊</li><li>头部外伤后头痛</li></ul></div>
+      <div class="tags"><span class="tag">头痛</span><span class="tag">头颈</span><span class="tag">压力</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-neck">
+      <div class="meta">常见不适</div>
+      <div class="title">肩颈紧张</div>
+      <p class="subtitle">理解风池、肩井、合谷、曲池在肩颈紧张相关讨论中的作用。</p>
+      <p>肩颈紧张常与久坐、压力、姿势和睡眠有关，也可能与外伤或神经受压相关。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">经络不畅</span><span class="pill">风寒束表</span><span class="pill">筋肉紧张</span><span class="pill">气血运行不利</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><strong>局部：</strong><a href="#p-gb20">风池</a>、<a href="#p-gb21">肩井</a>。</li>
+        <li><strong>远端：</strong><a href="#p-li4">合谷</a>、<a href="#p-li11">曲池</a>。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>肩颈只做轻柔按揉</li><li>避免按压颈前方</li><li>肩井孕妇慎用</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应及时就医：</strong><ul style="margin-top:8px"><li>手臂麻木无力</li><li>胸痛</li><li>外伤后疼痛</li><li>头晕明显</li><li>疼痛持续加重</li></ul></div>
+      <div class="tags"><span class="tag">肩颈</span><span class="tag">久坐</span><span class="tag">上肢</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-sleep">
+      <div class="meta">常见不适</div>
+      <div class="title">睡眠不好</div>
+      <p class="subtitle">认识神门、三阴交、百会、太冲等常见于睡眠和放松相关讨论的穴位。</p>
+      <p>睡眠不好可能与压力、作息、环境、情绪或健康问题有关。本站仅提供传统理论学习和轻柔按揉参考，不承诺改善失眠。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">心神不宁</span><span class="pill">肝郁气滞</span><span class="pill">阴血不足</span><span class="pill">脾胃不和</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><strong>腕部：</strong><a href="#p-ht7">神门</a>心经代表穴。</li>
+        <li><strong>小腿：</strong><a href="#p-sp6">三阴交</a>多条阴经交会。</li>
+        <li><strong>头顶：</strong><a href="#p-gv20">百会</a>。</li>
+        <li><strong>足部：</strong><a href="#p-lr3">太冲</a>调情绪。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>睡前轻柔按揉腕部或足部</li><li>避免强刺激</li><li>配合放松呼吸</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应寻求专业帮助：</strong><ul style="margin-top:8px"><li>长期严重失眠</li><li>明显情绪低落</li><li>白天功能严重受影响</li><li>胸闷心悸明显</li><li>需要依赖酒精入睡</li></ul></div>
+      <div class="tags"><span class="tag">睡眠</span><span class="tag">放松</span><span class="tag">安神</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-anxiety">
+      <div class="meta">常见不适</div>
+      <div class="title">焦虑紧张</div>
+      <p class="subtitle">从胸腹、腕部和足部穴位理解情绪紧张相关传统讨论。</p>
+      <p>焦虑紧张可能是短暂压力反应，也可能需要心理或医学支持。按揉只能作为放松参考，不能替代专业帮助。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">肝气郁结</span><span class="pill">心神不宁</span><span class="pill">气机不畅</span><span class="pill">胸中气滞</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><a href="#p-pc6">内关</a>、<a href="#p-ht7">神门</a>：腕部、前臂安神。</li>
+        <li><a href="#p-lr3">太冲</a>：肝经调情绪。</li>
+        <li><a href="#p-cv17">膻中</a>：胸前气机。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>轻柔按揉内关、神门或太冲</li><li>胸前只做轻柔抚按</li><li>配合缓慢呼吸</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应立即就医：</strong><ul style="margin-top:8px"><li>胸痛</li><li>呼吸困难</li><li>自伤想法</li><li>惊恐反复发作</li><li>严重影响生活</li><li>晕厥</li></ul></div>
+      <div class="tags"><span class="tag">焦虑</span><span class="tag">紧张</span><span class="tag">情绪</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-menstrual">
+      <div class="meta">常见不适</div>
+      <div class="title">经期不适</div>
+      <p class="subtitle">认识三阴交、关元、气海、太冲等经期不适相关传统穴位。</p>
+      <p>经期不适程度因人而异。剧烈疼痛、异常出血或怀孕可能时应及时就医。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">寒凝胞宫</span><span class="pill">气滞血瘀</span><span class="pill">肝郁气滞</span><span class="pill">气血不足</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><a href="#p-sp6">三阴交</a>：妇科经典穴。</li>
+        <li><a href="#p-cv4">关元</a>、<a href="#p-cv6">气海</a>：下腹任脉。</li>
+        <li><a href="#p-lr3">太冲</a>：肝经调情绪与气机。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>腹部按揉要轻柔</li><li>小腿和足部不做强刺激</li><li>孕妇慎用三阴交、合谷、肩井、昆仑等</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应及时就医：</strong><ul style="margin-top:8px"><li>经期剧烈疼痛</li><li>异常大量出血</li><li>怀孕可能</li><li>发热</li><li>晕厥</li><li>突然出现不同以往的疼痛</li></ul></div>
+      <div class="tags"><span class="tag">经期</span><span class="tag">下腹</span><span class="tag">女性健康</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
+    <article class="entry" id="c-lowback">
+      <div class="meta">常见不适</div>
+      <div class="title">腰背酸痛</div>
+      <p class="subtitle">理解委中、昆仑、太溪、气海在腰背酸痛相关传统讨论中的位置。</p>
+      <p>腰背酸痛常与姿势、劳损、久坐有关，也可能来自外伤、神经压迫或内科问题。红旗情况应尽快就医。</p>
+      <h3>传统中医常见解释角度</h3>
+      <div class="pills"><span class="pill">肾虚腰痛</span><span class="pill">寒湿阻络</span><span class="pill">气血不畅</span><span class="pill">劳损筋骨</span></div>
+      <h3>为什么可能会取这些穴位？</h3>
+      <ul>
+        <li><a href="#p-bl40">委中</a>：膝后膀胱经远端取穴。</li>
+        <li><a href="#p-bl60">昆仑</a>：踝部膀胱经。</li>
+        <li><a href="#p-ki3">太溪</a>：肾经，与腰膝相关。</li>
+        <li><a href="#p-cv6">气海</a>：下腹保健参考。</li>
+      </ul>
+      <h3>普通人可以做的安全按揉</h3>
+      <ul><li>膝后只可轻柔按揉</li><li>踝部受伤时避免</li><li>下腹按揉要谨慎</li><li>不要自行针刺</li></ul>
+      <div class="redflag"><strong>🚨 应及时就医：</strong><ul style="margin-top:8px"><li>外伤后疼痛</li><li>下肢无力麻木</li><li>大小便异常</li><li>发热</li><li>夜间痛明显</li><li>癌症病史</li><li>老年人突然严重腰痛</li></ul></div>
+      <div class="tags"><span class="tag">腰背</span><span class="tag">久坐</span><span class="tag">下肢</span></div>
+      <a class="backtop" href="#conditions">↑ 回到常见不适</a>
+    </article>
+
   </div>
 </section>
 
-<!-- SECTION: POINTS_PLACEHOLDER -->
 <section id="points">
   <div class="container">
     <div class="eyebrow">POINTS</div>
     <h2>穴位图谱</h2>
     <p style="color:#5b6b63">了解所属经络、传统用途与轻柔按揉的注意事项。共 20 个常用穴位。</p>
     <div class="toc">
-      <a href="#p-st36">足三里 ST36</a>
-      <a href="#p-pc6">内关 PC6</a>
-      <a href="#p-li4">合谷 LI4</a>
-      <a href="#p-cv12">中脘 CV12</a>
-      <a href="#p-st25">天枢 ST25</a>
-      <a href="#p-sp4">公孙 SP4</a>
-      <a href="#p-sp6">三阴交 SP6</a>
-      <a href="#p-lr3">太冲 LR3</a>
-      <a href="#p-gb20">风池 GB20</a>
-      <a href="#p-gv20">百会 GV20</a>
-      <a href="#p-ht7">神门 HT7</a>
-      <a href="#p-ki3">太溪 KI3</a>
-      <a href="#p-sp9">阴陵泉 SP9</a>
-      <a href="#p-li11">曲池 LI11</a>
-      <a href="#p-cv4">关元 CV4</a>
-      <a href="#p-cv6">气海 CV6</a>
-      <a href="#p-cv17">膻中 CV17</a>
-      <a href="#p-gb21">肩井 GB21</a>
-      <a href="#p-bl40">委中 BL40</a>
-      <a href="#p-bl60">昆仑 BL60</a>
+      <a href="#p-st36">足三里 ST36</a><a href="#p-pc6">内关 PC6</a><a href="#p-li4">合谷 LI4</a><a href="#p-cv12">中脘 CV12</a><a href="#p-st25">天枢 ST25</a><a href="#p-sp4">公孙 SP4</a><a href="#p-sp6">三阴交 SP6</a><a href="#p-lr3">太冲 LR3</a><a href="#p-gb20">风池 GB20</a><a href="#p-gv20">百会 GV20</a><a href="#p-ht7">神门 HT7</a><a href="#p-ki3">太溪 KI3</a><a href="#p-sp9">阴陵泉 SP9</a><a href="#p-li11">曲池 LI11</a><a href="#p-cv4">关元 CV4</a><a href="#p-cv6">气海 CV6</a><a href="#p-cv17">膻中 CV17</a><a href="#p-gb21">肩井 GB21</a><a href="#p-bl40">委中 BL40</a><a href="#p-bl60">昆仑 BL60</a>
     </div>
+
+    <article class="entry" id="p-st36">
+      <div class="meta">ST36 · 足阳明胃经</div>
+      <div class="title">足三里 <span style="color:#5b6b63;font-weight:500;font-size:16px">Zusanli</span></div>
+      <p class="subtitle">传统针灸学习中非常经典的穴位，常见于消化、体力恢复和脾胃调理相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>ST36</dd><dt>所属经络</dt><dd><a href="#m-stomach">足阳明胃经</a></dd><dt>所在部位</dt><dd>小腿</dd></dl>
+      <h4>大致位置</h4><p>位于小腿前外侧，膝盖下方附近。专业定位应由受过训练者完成。</p>
+      <h4>传统用途</h4><ul><li>胃肠不适</li><li>食欲与消化</li><li>疲劳乏力</li><li>脾胃调理</li><li>日常保健</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>可用拇指轻柔按压</li><li>每侧约30秒到1分钟</li><li>以酸胀但不明显疼痛为宜</li><li>配合缓慢呼吸</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>请勿自行针刺</li><li>饭后不建议强力按揉</li><li>皮肤破损时避免</li><li>症状严重应就医</li></ul></div>
+      <div class="tags"><span class="tag">胃经</span><span class="tag">消化</span><span class="tag">小腿</span><span class="tag">保健</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-pc6">
+      <div class="meta">PC6 · 手厥阴心包经</div>
+      <div class="title">内关 <span style="color:#5b6b63;font-weight:500;font-size:16px">Neiguan</span></div>
+      <p class="subtitle">常见于恶心、胸腹不适、紧张和情绪相关讨论中。</p>
+      <dl class="kv"><dt>编号</dt><dd>PC6</dd><dt>所属经络</dt><dd><a href="#m-pericardium">手厥阴心包经</a></dd><dt>所在部位</dt><dd>前臂</dd></dl>
+      <h4>大致位置</h4><p>位于前臂内侧，手腕横纹上方一带。</p>
+      <h4>传统用途</h4><ul><li>恶心反胃</li><li>胸腹不适</li><li>紧张焦虑</li><li>晕车按揉</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>用另一只手拇指轻柔按压</li><li>保持呼吸平稳</li><li>不需要用力过猛</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>请勿自行针刺</li><li>局部疼痛或皮肤破损时不要按揉</li><li>胸痛、呼吸困难应立即就医</li></ul></div>
+      <div class="tags"><span class="tag">心包经</span><span class="tag">恶心</span><span class="tag">前臂</span><span class="tag">焦虑</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-li4">
+      <div class="meta">LI4 · 手阳明大肠经</div>
+      <div class="title">合谷 <span style="color:#5b6b63;font-weight:500;font-size:16px">Hegu</span></div>
+      <p class="subtitle">手部常见穴位，传统上常见于头面部不适、紧张和疼痛相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>LI4</dd><dt>所属经络</dt><dd><a href="#m-li">手阳明大肠经</a></dd><dt>所在部位</dt><dd>手部</dd></dl>
+      <h4>大致位置</h4><p>位于手背拇指与食指之间的区域。</p>
+      <h4>传统用途</h4><ul><li>头痛</li><li>面部不适</li><li>紧张相关</li><li>上肢不适</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>用另一只手拇指轻柔按压虎口</li><li>以酸胀感为度</li><li>不要按到明显疼痛</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>孕妇慎用</li><li>请勿自行针刺</li><li>皮肤破损时避免</li></ul></div>
+      <div class="tags"><span class="tag">大肠经</span><span class="tag">手部</span><span class="tag">头痛</span><span class="tag">孕妇慎用</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-cv12">
+      <div class="meta">CV12 · 任脉</div>
+      <div class="title">中脘 <span style="color:#5b6b63;font-weight:500;font-size:16px">Zhongwan</span></div>
+      <p class="subtitle">位于上腹部区域，与胃部和消化相关讨论较多。</p>
+      <dl class="kv"><dt>编号</dt><dd>CV12</dd><dt>所属经络</dt><dd><a href="#m-ren">任脉</a></dd><dt>所在部位</dt><dd>腹部</dd></dl>
+      <h4>大致位置</h4><p>位于上腹部正中线一带。腹部穴位定位需谨慎。</p>
+      <h4>传统用途</h4><ul><li>胃部不适</li><li>消化不良</li><li>腹胀</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>轻柔按揉上腹正中</li><li>饭后不立即按揉</li><li>力度轻柔</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>腹痛剧烈不要自行处理</li><li>孕期应咨询医生</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">任脉</span><span class="tag">腹部</span><span class="tag">胃部</span><span class="tag">消化</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-st25">
+      <div class="meta">ST25 · 足阳明胃经</div>
+      <div class="title">天枢 <span style="color:#5b6b63;font-weight:500;font-size:16px">Tianshu</span></div>
+      <p class="subtitle">腹部常见穴位，传统上与肠道和腹部不适相关讨论较多。</p>
+      <dl class="kv"><dt>编号</dt><dd>ST25</dd><dt>所属经络</dt><dd><a href="#m-stomach">足阳明胃经</a></dd><dt>所在部位</dt><dd>腹部</dd></dl>
+      <h4>大致位置</h4><p>位于肚脐两侧附近区域。</p>
+      <h4>传统用途</h4><ul><li>腹胀</li><li>便秘</li><li>腹泻</li><li>腹部不适</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>环形按揉肚脐两侧</li><li>避免饭后强力按压</li><li>不适时停止</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>剧烈腹痛、发热应就医</li><li>孕妇慎重</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">胃经</span><span class="tag">腹部</span><span class="tag">便秘</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-sp4">
+      <div class="meta">SP4 · 足太阴脾经</div>
+      <div class="title">公孙 <span style="color:#5b6b63;font-weight:500;font-size:16px">Gongsun</span></div>
+      <p class="subtitle">位于足部，常见于脾胃和胸腹部不适相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>SP4</dd><dt>所属经络</dt><dd><a href="#m-spleen">足太阴脾经</a></dd><dt>所在部位</dt><dd>足部</dd></dl>
+      <h4>大致位置</h4><p>位于足内侧区域，靠近第一跖骨附近。</p>
+      <h4>传统用途</h4><ul><li>胃部不适</li><li>腹胀</li><li>消化问题</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉</li><li>每侧 30 秒到 1 分钟</li><li>以舒适或轻微酸胀为度</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>足部有伤口时避免</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">脾经</span><span class="tag">足部</span><span class="tag">远端取穴</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-sp6">
+      <div class="meta">SP6 · 足太阴脾经</div>
+      <div class="title">三阴交 <span style="color:#5b6b63;font-weight:500;font-size:16px">Sanyinjiao</span></div>
+      <p class="subtitle">传统针灸中非常重要的穴位，常见于妇科、睡眠、脾胃和下肢相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>SP6</dd><dt>所属经络</dt><dd><a href="#m-spleen">足太阴脾经</a></dd><dt>所在部位</dt><dd>小腿</dd></dl>
+      <h4>大致位置</h4><p>位于小腿内侧，内踝上方一带。</p>
+      <h4>传统用途</h4><ul><li>经期不适</li><li>睡眠</li><li>脾胃调理</li><li>下肢不适</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>轻柔按揉小腿内侧</li><li>不要强刺激</li><li>不适时停止</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>孕妇慎用</li><li>请勿自行针刺</li><li>静脉曲张时避免</li></ul></div>
+      <div class="tags"><span class="tag">脾经</span><span class="tag">小腿</span><span class="tag">经期</span><span class="tag">孕妇慎用</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-lr3">
+      <div class="meta">LR3 · 足厥阴肝经</div>
+      <div class="title">太冲 <span style="color:#5b6b63;font-weight:500;font-size:16px">Taichong</span></div>
+      <p class="subtitle">足部经典穴位，常见于情绪紧张、头痛和气机不畅相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>LR3</dd><dt>所属经络</dt><dd><a href="#m-liver">足厥阴肝经</a></dd><dt>所在部位</dt><dd>足部</dd></dl>
+      <h4>大致位置</h4><p>位于足背第一、二跖骨之间区域。</p>
+      <h4>传统用途</h4><ul><li>情绪紧张</li><li>头痛</li><li>压力相关</li><li>气机不畅</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>拇指轻柔按压足背</li><li>配合缓慢呼吸</li><li>不要按到明显疼痛</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>足部伤口时避免</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">肝经</span><span class="tag">足部</span><span class="tag">压力</span><span class="tag">头痛</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-gb20">
+      <div class="meta">GB20 · 足少阳胆经</div>
+      <div class="title">风池 <span style="color:#5b6b63;font-weight:500;font-size:16px">Fengchi</span></div>
+      <p class="subtitle">常见于头痛、头项不适和肩颈紧张相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>GB20</dd><dt>所属经络</dt><dd><a href="#m-gb">足少阳胆经</a></dd><dt>所在部位</dt><dd>后颈部</dd></dl>
+      <h4>大致位置</h4><p>位于后颈部靠近头颅底部两侧区域。颈部操作应特别谨慎。</p>
+      <h4>传统用途</h4><ul><li>头痛</li><li>肩颈紧张</li><li>头项不适</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉后颈两侧</li><li>避免压迫喉颈前方</li><li>头晕应停止</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>颈部不要强力按压</li><li>请勿自行针刺</li><li>突发头痛应就医</li></ul></div>
+      <div class="tags"><span class="tag">胆经</span><span class="tag">后颈部</span><span class="tag">头痛</span><span class="tag">肩颈</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-gv20">
+      <div class="meta">GV20 · 督脉</div>
+      <div class="title">百会 <span style="color:#5b6b63;font-weight:500;font-size:16px">Baihui</span></div>
+      <p class="subtitle">头顶部经典穴位，常见于精神紧张、头部不适和传统学习中。</p>
+      <dl class="kv"><dt>编号</dt><dd>GV20</dd><dt>所属经络</dt><dd><a href="#m-du">督脉</a></dd><dt>所在部位</dt><dd>头顶部</dd></dl>
+      <h4>大致位置</h4><p>位于头顶部正中附近。</p>
+      <h4>传统用途</h4><ul><li>精神紧张</li><li>头部不适</li><li>传统学习</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔点按头顶</li><li>力度要轻</li><li>头晕时停止</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>头部不适严重应就医</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">督脉</span><span class="tag">头部</span><span class="tag">放松</span><span class="tag">睡眠</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-ht7">
+      <div class="meta">HT7 · 手少阴心经</div>
+      <div class="title">神门 <span style="color:#5b6b63;font-weight:500;font-size:16px">Shenmen</span></div>
+      <p class="subtitle">常见于睡眠、紧张和心神相关传统讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>HT7</dd><dt>所属经络</dt><dd><a href="#m-heart">手少阴心经</a></dd><dt>所在部位</dt><dd>腕部</dd></dl>
+      <h4>大致位置</h4><p>位于腕部掌侧靠近小指一侧。</p>
+      <h4>传统用途</h4><ul><li>睡眠</li><li>紧张不安</li><li>情绪放松</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉</li><li>每侧 30 秒到 1 分钟</li><li>以舒适或轻微酸胀为度</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>腕部疼痛麻木时不要按揉</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">心经</span><span class="tag">腕部</span><span class="tag">睡眠</span><span class="tag">情绪</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-ki3">
+      <div class="meta">KI3 · 足少阴肾经</div>
+      <div class="title">太溪 <span style="color:#5b6b63;font-weight:500;font-size:16px">Taixi</span></div>
+      <p class="subtitle">踝部常见穴位，常见于疲劳、腰膝和肾经学习相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>KI3</dd><dt>所属经络</dt><dd><a href="#m-kidney">足少阴肾经</a></dd><dt>所在部位</dt><dd>踝部</dd></dl>
+      <h4>大致位置</h4><p>位于内踝附近区域。</p>
+      <h4>传统用途</h4><ul><li>疲劳</li><li>腰膝不适</li><li>肾经学习</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉</li><li>每侧 30 秒到 1 分钟</li><li>以舒适为度</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>踝部受伤时不要按揉</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">肾经</span><span class="tag">踝部</span><span class="tag">疲劳</span><span class="tag">腰膝</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-sp9">
+      <div class="meta">SP9 · 足太阴脾经</div>
+      <div class="title">阴陵泉 <span style="color:#5b6b63;font-weight:500;font-size:16px">Yinlingquan</span></div>
+      <p class="subtitle">常见于水湿、下肢和脾经学习相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>SP9</dd><dt>所属经络</dt><dd><a href="#m-spleen">足太阴脾经</a></dd><dt>所在部位</dt><dd>小腿内侧</dd></dl>
+      <h4>大致位置</h4><p>位于小腿内侧膝下附近。</p>
+      <h4>传统用途</h4><ul><li>湿重相关</li><li>下肢不适</li><li>脾经学习</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉</li><li>每侧 30 秒到 1 分钟</li><li>不强刺激</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>局部肿痛时避免</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">脾经</span><span class="tag">小腿</span><span class="tag">水湿</span><span class="tag">下肢</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-li11">
+      <div class="meta">LI11 · 手阳明大肠经</div>
+      <div class="title">曲池 <span style="color:#5b6b63;font-weight:500;font-size:16px">Quchi</span></div>
+      <p class="subtitle">肘部常见穴位，传统上见于上肢和清热相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>LI11</dd><dt>所属经络</dt><dd><a href="#m-li">手阳明大肠经</a></dd><dt>所在部位</dt><dd>肘部</dd></dl>
+      <h4>大致位置</h4><p>位于肘部外侧附近。</p>
+      <h4>传统用途</h4><ul><li>上肢不适</li><li>清热</li><li>大肠经学习</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉</li><li>不强刺激</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>肘部损伤时避免</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">大肠经</span><span class="tag">肘部</span><span class="tag">上肢</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-cv4">
+      <div class="meta">CV4 · 任脉</div>
+      <div class="title">关元 <span style="color:#5b6b63;font-weight:500;font-size:16px">Guanyuan</span></div>
+      <p class="subtitle">位于下腹部正中区域，常见于元气、下腹和保健相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>CV4</dd><dt>所属经络</dt><dd><a href="#m-ren">任脉</a></dd><dt>所在部位</dt><dd>下腹部</dd></dl>
+      <h4>大致位置</h4><p>位于下腹部正中线一带。</p>
+      <h4>传统用途</h4><ul><li>元气相关</li><li>下腹保健</li><li>经期不适</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>隔衣物轻柔按揉</li><li>腹痛原因不明时避免</li><li>不追求强刺激</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>孕期慎</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">任脉</span><span class="tag">下腹</span><span class="tag">经期</span><span class="tag">保健</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-cv6">
+      <div class="meta">CV6 · 任脉</div>
+      <div class="title">气海 <span style="color:#5b6b63;font-weight:500;font-size:16px">Qihai</span></div>
+      <p class="subtitle">下腹部任脉穴位，常见于气虚、疲劳和下腹保健相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>CV6</dd><dt>所属经络</dt><dd><a href="#m-ren">任脉</a></dd><dt>所在部位</dt><dd>下腹部</dd></dl>
+      <h4>大致位置</h4><p>位于下腹部正中线一带。</p>
+      <h4>传统用途</h4><ul><li>气虚</li><li>疲劳</li><li>下腹保健</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>轻柔按揉下腹正中</li><li>孕期慎用</li><li>不适时停止</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>孕期慎用</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">任脉</span><span class="tag">下腹</span><span class="tag">疲劳</span><span class="tag">气虚</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-cv17">
+      <div class="meta">CV17 · 任脉</div>
+      <div class="title">膻中 <span style="color:#5b6b63;font-weight:500;font-size:16px">Danzhong</span></div>
+      <p class="subtitle">位于胸部正中区域，常见于胸闷、情绪和呼吸相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>CV17</dd><dt>所属经络</dt><dd><a href="#m-ren">任脉</a></dd><dt>所在部位</dt><dd>胸部</dd></dl>
+      <h4>大致位置</h4><p>位于胸骨前方正中一带。</p>
+      <h4>传统用途</h4><ul><li>胸闷</li><li>情绪紧张</li><li>呼吸相关</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>轻柔抚按胸前正中</li><li>胸痛或气短时不要自行处理</li><li>呼吸平稳</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>胸痛、呼吸困难应立即就医</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">任脉</span><span class="tag">胸部</span><span class="tag">情绪</span><span class="tag">呼吸</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-gb21">
+      <div class="meta">GB21 · 足少阳胆经</div>
+      <div class="title">肩井 <span style="color:#5b6b63;font-weight:500;font-size:16px">Jianjing</span></div>
+      <p class="subtitle">位于肩部，常见于肩颈紧张相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>GB21</dd><dt>所属经络</dt><dd><a href="#m-gb">足少阳胆经</a></dd><dt>所在部位</dt><dd>肩部</dd></dl>
+      <h4>大致位置</h4><p>位于肩上区域。</p>
+      <h4>传统用途</h4><ul><li>肩颈紧张</li><li>上背不适</li><li>胆经学习</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>轻柔揉按肩上肌肉</li><li>不要用肘部重压</li><li>孕妇避免强刺激</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>孕妇慎用</li><li>肩颈不要强刺激</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">胆经</span><span class="tag">肩部</span><span class="tag">孕妇慎用</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-bl40">
+      <div class="meta">BL40 · 足太阳膀胱经</div>
+      <div class="title">委中 <span style="color:#5b6b63;font-weight:500;font-size:16px">Weizhong</span></div>
+      <p class="subtitle">位于膝后，常见于腰背酸痛和下肢不适相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>BL40</dd><dt>所属经络</dt><dd><a href="#m-bladder">足太阳膀胱经</a></dd><dt>所在部位</dt><dd>膝后</dd></dl>
+      <h4>大致位置</h4><p>位于膝关节后方区域。</p>
+      <h4>传统用途</h4><ul><li>腰背酸痛</li><li>下肢不适</li><li>膀胱经学习</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉膝后</li><li>避免深压</li><li>不适立即停止</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>膝后血管神经丰富，只可轻柔</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">膀胱经</span><span class="tag">膝后</span><span class="tag">腰背</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
+    <article class="entry" id="p-bl60">
+      <div class="meta">BL60 · 足太阳膀胱经</div>
+      <div class="title">昆仑 <span style="color:#5b6b63;font-weight:500;font-size:16px">Kunlun</span></div>
+      <p class="subtitle">位于踝部，常见于腰背、头项和下肢相关讨论。</p>
+      <dl class="kv"><dt>编号</dt><dd>BL60</dd><dt>所属经络</dt><dd><a href="#m-bladder">足太阳膀胱经</a></dd><dt>所在部位</dt><dd>踝部</dd></dl>
+      <h4>大致位置</h4><p>位于外踝附近区域。</p>
+      <h4>传统用途</h4><ul><li>腰背</li><li>头项</li><li>下肢不适</li></ul>
+      <h4>安全按揉小贴士</h4><ul><li>指腹轻柔按揉</li><li>每侧 30 秒到 1 分钟</li><li>不强刺激</li></ul>
+      <div class="redflag"><strong>⚠️ 注意：</strong><ul style="margin-top:8px"><li>孕妇慎用</li><li>踝部受伤时避免</li><li>请勿自行针刺</li></ul></div>
+      <div class="tags"><span class="tag">膀胱经</span><span class="tag">踝部</span><span class="tag">腰背</span><span class="tag">孕妇慎用</span></div>
+      <a class="backtop" href="#points">↑ 回到穴位图谱</a>
+    </article>
+
   </div>
 </section>
 
-<!-- SECTION: MERIDIANS_PLACEHOLDER -->
 <section id="meridians">
   <div class="container">
     <div class="eyebrow">MERIDIANS</div>
     <h2>经络入门</h2>
     <p style="color:#5b6b63">经络是传统中医的学习框架，帮助理解为什么远处的穴位也可能用于局部不适。</p>
     <div class="toc">
-      <a href="#m-stomach">足阳明胃经</a>
-      <a href="#m-spleen">足太阴脾经</a>
-      <a href="#m-liver">足厥阴肝经</a>
-      <a href="#m-pericardium">手厥阴心包经</a>
-      <a href="#m-li">手阳明大肠经</a>
-      <a href="#m-ren">任脉</a>
-      <a href="#m-heart">手少阴心经</a>
-      <a href="#m-kidney">足少阴肾经</a>
-      <a href="#m-gb">足少阳胆经</a>
-      <a href="#m-bladder">足太阳膀胱经</a>
-      <a href="#m-du">督脉</a>
+      <a href="#m-stomach">足阳明胃经</a><a href="#m-spleen">足太阴脾经</a><a href="#m-liver">足厥阴肝经</a><a href="#m-pericardium">手厥阴心包经</a><a href="#m-li">手阳明大肠经</a><a href="#m-ren">任脉</a><a href="#m-heart">手少阴心经</a><a href="#m-kidney">足少阴肾经</a><a href="#m-gb">足少阳胆经</a><a href="#m-bladder">足太阳膀胱经</a><a href="#m-du">督脉</a>
     </div>
+
+    <article class="entry" id="m-stomach"><div class="meta">Stomach Meridian</div><div class="title">足阳明胃经</div><p>与面部、胸腹和下肢路径相关，是理解消化相关远端取穴思路的重要经络。</p><h4>路径概览</h4><p>科普层面可理解为从头面、胸腹延伸到下肢前外侧的一条传统经络路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">胃肠与消化</span><span class="pill">面部和胸腹联系</span><span class="pill">小腿远端取穴</span></div><h4>相关穴位</h4><p><a href="#p-st36">足三里 ST36</a> · <a href="#p-st25">天枢 ST25</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-spleen"><div class="meta">Spleen Meridian</div><div class="title">足太阴脾经</div><p>常见于脾胃、消化、水湿和下肢内侧相关讨论。</p><h4>路径概览</h4><p>从足部内侧沿下肢内侧向上的传统路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">脾胃</span><span class="pill">水湿</span><span class="pill">下肢内侧</span></div><h4>相关穴位</h4><p><a href="#p-sp4">公孙 SP4</a> · <a href="#p-sp6">三阴交 SP6</a> · <a href="#p-sp9">阴陵泉 SP9</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-liver"><div class="meta">Liver Meridian</div><div class="title">足厥阴肝经</div><p>与情绪、气机、压力和足部穴位的传统讨论联系在一起。</p><h4>路径概览</h4><p>从足部向上，与下腹、胸胁和情绪相关概念相连。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">情绪压力</span><span class="pill">气机</span><span class="pill">足部</span></div><h4>相关穴位</h4><p><a href="#p-lr3">太冲 LR3</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-pericardium"><div class="meta">Pericardium Meridian</div><div class="title">手厥阴心包经</div><p>与内关、胸腹不适、恶心和紧张相关讨论密切相关。</p><h4>路径概览</h4><p>经过胸部、上肢内侧到手部的传统路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">内关</span><span class="pill">胸腹</span><span class="pill">紧张</span></div><h4>相关穴位</h4><p><a href="#p-pc6">内关 PC6</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-li"><div class="meta">Large Intestine Meridian</div><div class="title">手阳明大肠经</div><p>合谷、曲池是代表穴位，常用于学习头面部、上肢与远端取穴思路。</p><h4>路径概览</h4><p>从手部沿上肢外侧到头面部的传统路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">头面</span><span class="pill">上肢</span><span class="pill">远端取穴</span></div><h4>相关穴位</h4><p><a href="#p-li4">合谷 LI4</a> · <a href="#p-li11">曲池 LI11</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-ren"><div class="meta">Ren Vessel</div><div class="title">任脉</div><p>位于人体前正中线，包含中脘、关元、气海、膻中等穴位。</p><h4>路径概览</h4><p>沿身体前正中线分布，涉及胸部、上腹和下腹区域。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">腹部</span><span class="pill">胸部</span><span class="pill">正中线</span></div><h4>相关穴位</h4><p><a href="#p-cv12">中脘 CV12</a> · <a href="#p-cv4">关元 CV4</a> · <a href="#p-cv6">气海 CV6</a> · <a href="#p-cv17">膻中 CV17</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-heart"><div class="meta">Heart Meridian</div><div class="title">手少阴心经</div><p>与心神、睡眠、情绪相关讨论关联较多。</p><h4>路径概览</h4><p>从胸部沿上肢内侧到手部的传统路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">心神</span><span class="pill">睡眠</span><span class="pill">腕部</span></div><h4>相关穴位</h4><p><a href="#p-ht7">神门 HT7</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-kidney"><div class="meta">Kidney Meridian</div><div class="title">足少阴肾经</div><p>传统上与腰膝、疲劳、生殖等学习主题相关。</p><h4>路径概览</h4><p>从足底沿下肢内侧向上的传统路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">腰膝</span><span class="pill">疲劳</span><span class="pill">下肢内侧</span></div><h4>相关穴位</h4><p><a href="#p-ki3">太溪 KI3</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-gb"><div class="meta">Gallbladder Meridian</div><div class="title">足少阳胆经</div><p>与头侧、肩颈、下肢外侧的传统取穴讨论相关。</p><h4>路径概览</h4><p>从头侧沿身体侧面到下肢外侧的传统路径。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">肩颈</span><span class="pill">头侧</span><span class="pill">下肢外侧</span></div><h4>相关穴位</h4><p><a href="#p-gb20">风池 GB20</a> · <a href="#p-gb21">肩井 GB21</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-bladder"><div class="meta">Bladder Meridian</div><div class="title">足太阳膀胱经</div><p>路径最长的传统经络之一，涉及后背、下肢后侧。</p><h4>路径概览</h4><p>从头部沿后背、下肢后侧延伸到足部。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">腰背</span><span class="pill">下肢后侧</span><span class="pill">远端取穴</span></div><h4>相关穴位</h4><p><a href="#p-bl40">委中 BL40</a> · <a href="#p-bl60">昆仑 BL60</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
+    <article class="entry" id="m-du"><div class="meta">Du Vessel</div><div class="title">督脉</div><p>位于人体后正中线，与头顶、脊柱相关。</p><h4>路径概览</h4><p>沿身体后正中线分布。</p><h4>常见学习主题</h4><div class="pills"><span class="pill">头顶</span><span class="pill">脊柱</span><span class="pill">督脉</span></div><h4>相关穴位</h4><p><a href="#p-gv20">百会 GV20</a></p><a class="backtop" href="#meridians">↑ 回到经络入门</a></article>
+
   </div>
 </section>
 
-<!-- SECTION: GUIDE_PLACEHOLDER -->
 <section id="guide">
   <div class="container">
     <div class="eyebrow">ACUPRESSURE</div>
