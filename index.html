@@ -5,554 +5,258 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>AcuPoint Atlas 穴位图谱</title>
 <style>
-:root{--ink:#1C1C1C;--pine:#1F4D3A;--gold:#C8A96A;--mint:#E8F1EC;--rice:#FAF7F0;--card:#fff;--muted:#5b6b63;--border:#e3ddd0}
 *{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;background:var(--rice);color:var(--ink);line-height:1.7}
-a{color:var(--pine);text-decoration:none}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif;background:#FAF7F0;color:#1C1C1C;line-height:1.7}
+a{color:#1F4D3A;text-decoration:none}
 a:hover{text-decoration:underline}
-.container{max-width:1180px;margin:0 auto;padding:0 20px}
-header.site{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.95);border-bottom:1px solid var(--border)}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.96);border-bottom:1px solid #e3ddd0;backdrop-filter:blur(8px)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px;flex-wrap:wrap}
-.brand{font-weight:800;color:var(--pine);font-size:18px}
-.brand small{color:var(--gold);font-weight:600;margin-left:6px;font-size:12px}
-nav ul{list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap}
-nav a{display:inline-block;padding:8px 14px;border-radius:999px;color:var(--ink);font-size:14px;font-weight:500}
-nav a:hover{background:var(--mint);text-decoration:none;color:var(--pine)}
-nav a.active{background:var(--pine);color:#fff}
-.hero{background:linear-gradient(180deg,var(--mint),var(--rice));padding:50px 0 40px}
-.eyebrow{font-weight:700;color:var(--gold);letter-spacing:.5px;font-size:13px;margin-bottom:10px;text-transform:uppercase}
-h1{font-size:38px;line-height:1.15;color:var(--pine);margin:0 0 16px;font-weight:800}
+.brand{font-weight:800;color:#1F4D3A;font-size:18px}
+.brand small{color:#C8A96A;font-weight:600;margin-left:6px;font-size:12px}
+nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:inline-block;padding:8px 14px;border-radius:999px;color:#1C1C1C;font-size:14px;font-weight:500}
+nav a:hover{background:#E8F1EC;text-decoration:none;color:#1F4D3A}
+.hero{background:linear-gradient(180deg,#E8F1EC,#FAF7F0);padding:60px 0 50px}
+.eyebrow{font-weight:700;color:#C8A96A;letter-spacing:.5px;font-size:13px;margin-bottom:10px;text-transform:uppercase}
+h1{font-size:38px;line-height:1.15;color:#1F4D3A;margin:0 0 16px;font-weight:800}
+@media(min-width:880px){h1{font-size:48px}}
 .lead{font-size:17px;color:rgba(28,28,28,.78);max-width:680px;margin:0 0 20px}
-.cta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-block;padding:11px 18px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer}
-.btn.primary{background:var(--pine);color:#fff}
-.btn.primary:hover{background:#163a2c;text-decoration:none;color:#fff}
-.btn.outline{border-color:var(--pine);color:var(--pine);background:transparent}
-.btn.outline:hover{background:var(--mint);text-decoration:none}
-.search{display:flex;gap:8px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px;max-width:520px}
-.search input{flex:1;border:0;outline:0;padding:10px 14px;font-size:15px;background:transparent}
-.search button{background:var(--pine);color:#fff;border:0;border-radius:999px;padding:8px 18px;font-weight:600;cursor:pointer}
-section.block{padding:40px 0}
-.section-head{margin-bottom:22px}
-.section-head h2{font-size:26px;color:var(--pine);margin:0 0 8px;font-weight:800}
-.section-head p{color:var(--muted);margin:0;max-width:780px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}}
+.btn.primary{background:#1F4D3A;color:#fff}
+.btn.primary:hover{background:#163a2c;color:#fff;text-decoration:none}
+.btn.outline{border-color:#1F4D3A;color:#1F4D3A;background:transparent}
+.btn.outline:hover{background:#E8F1EC;text-decoration:none}
+section{padding:50px 0;border-top:1px solid #e3ddd0}
+section:first-of-type{border-top:0}
+h2{font-size:28px;color:#1F4D3A;margin:0 0 14px;font-weight:800}
+h3{color:#1F4D3A;margin:24px 0 8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
 @media(max-width:820px){.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.cards{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;display:block;cursor:pointer;color:inherit}
+.card{background:#fff;border:1px solid #e3ddd0;border-radius:14px;padding:16px;display:block;color:inherit}
 .card:hover{box-shadow:0 8px 24px rgba(31,77,58,.1);text-decoration:none;transform:translateY(-1px);transition:.15s}
-.card h3{margin:4px 0;color:var(--pine);font-size:16px}
-.card .meta{font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.3px;text-transform:uppercase}
-.card p{margin:6px 0 8px;color:var(--muted);font-size:13px}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{background:var(--mint);color:var(--pine);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:500}
-.notice{background:#fff8e6;border:1px solid #f1dca0;border-radius:14px;padding:14px 18px;color:#6b4f0f}
+.card .meta{font-size:11px;color:#C8A96A;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.card h4{margin:4px 0;color:#1F4D3A;font-size:16px}
+.card p{margin:6px 0 0;color:#5b6b63;font-size:13px}
+.notice{background:#fff8e6;border:1px solid #f1dca0;border-radius:14px;padding:14px 18px;color:#6b4f0f;margin:16px 0}
 .notice strong{color:#8a6411}
-.redflag{background:#fdecec;border:1px solid #f3b8b8;border-radius:14px;padding:14px 18px;color:#7a1f1f;margin-top:16px}
+.redflag{background:#fdecec;border:1px solid #f3b8b8;border-radius:14px;padding:14px 18px;color:#7a1f1f;margin:16px 0}
 .redflag strong{color:#a32626}
-footer.site{padding:30px 0 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--border);margin-top:20px;background:#f3eedf}
-footer.site .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
-.breadcrumb{font-size:13px;color:var(--muted);margin:20px 0 0}
-.breadcrumb a{color:var(--muted)}
-.detail{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin:16px 0}
-.detail h1{font-size:28px;margin-bottom:8px}
-.detail .meta{color:var(--gold);font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
-.detail h3{color:var(--pine);font-size:17px;margin:20px 0 8px}
-.detail ul{margin:8px 0;padding-left:20px}
-.detail li{margin:4px 0}
-.kv{display:grid;grid-template-columns:120px 1fr;gap:8px 16px;margin:14px 0;background:var(--mint);border-radius:12px;padding:14px 18px}
-.kv dt{color:var(--pine);font-weight:600}
+.entry{background:#fff;border:1px solid #e3ddd0;border-radius:16px;padding:22px;margin:18px 0}
+.entry .meta{color:#C8A96A;font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
+.entry h3:first-of-type{margin-top:14px}
+.kv{display:grid;grid-template-columns:120px 1fr;gap:6px 16px;margin:12px 0;background:#E8F1EC;border-radius:12px;padding:12px 16px}
+.kv dt{color:#1F4D3A;font-weight:600}
 .kv dd{margin:0}
 @media(max-width:520px){.kv{grid-template-columns:1fr}}
-.empty{color:var(--muted);text-align:center;padding:30px;background:#fff;border:1px dashed var(--border);border-radius:14px;margin:20px 0}
-.pill{display:inline-block;background:var(--mint);color:var(--pine);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600;margin:0 6px 6px 0}
-#errbar{display:none;background:#7a1f1f;color:#fff;padding:10px 16px;font-family:monospace;font-size:12px;white-space:pre-wrap;word-break:break-all}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.pill{background:#E8F1EC;color:#1F4D3A;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:#E8F1EC;color:#1F4D3A;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:500}
+ul{margin:8px 0;padding-left:20px}
+li{margin:4px 0}
+.back{display:inline-block;margin:10px 0;color:#5b6b63;font-size:13px}
+footer.site{padding:30px 0 50px;color:#5b6b63;font-size:14px;border-top:1px solid #e3ddd0;background:#f3eedf}
+footer.site .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.toc{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:14px 0}
+.toc a{background:#fff;border:1px solid #e3ddd0;border-radius:10px;padding:8px 12px;font-size:13px;color:#1F4D3A}
+.toc a:hover{background:#E8F1EC;text-decoration:none}
 </style>
 </head>
 <body>
 
-<div id="errbar"></div>
-
 <header class="site">
   <div class="container nav">
-    <a href="#/" class="brand">AcuPoint Atlas<small>穴位图谱</small></a>
+    <a href="#top" class="brand">AcuPoint Atlas<small>穴位图谱</small></a>
     <nav>
-      <ul id="navList">
-        <li><a href="#/" data-route="/">首页</a></li>
-        <li><a href="#/conditions" data-route="/conditions">常见不适</a></li>
-        <li><a href="#/points" data-route="/points">穴位图谱</a></li>
-        <li><a href="#/meridians" data-route="/meridians">经络入门</a></li>
-        <li><a href="#/acupressure-guide" data-route="/acupressure-guide">按揉指南</a></li>
-        <li><a href="#/safety" data-route="/safety">安全须知</a></li>
+      <ul>
+        <li><a href="#top">首页</a></li>
+        <li><a href="#conditions">常见不适</a></li>
+        <li><a href="#points">穴位图谱</a></li>
+        <li><a href="#meridians">经络入门</a></li>
+        <li><a href="#guide">按揉指南</a></li>
+        <li><a href="#safety">安全须知</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="app"><div class="container"><p style="padding:60px 0;color:#5b6b63;text-align:center">加载中…</p></div></main>
+<main id="top">
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">中文穴位科普 · 安全按揉参考</div>
+    <h1>AcuPoint Atlas 穴位图谱</h1>
+    <p class="lead">看懂针灸医生为什么这样取穴，学习常见穴位、经络逻辑与安全按揉方法。本站为科普网站，不提供诊断或针刺指导。</p>
+    <div class="cta">
+      <a class="btn primary" href="#conditions">查看常见不适</a>
+      <a class="btn outline" href="#points">浏览穴位图谱</a>
+      <a class="btn outline" href="#safety">阅读安全须知</a>
+    </div>
+    <div class="notice" style="margin-top:24px"><strong>安全提示：</strong>本站内容仅用于穴位知识科普与健康教育，不提供诊断或治疗建议。请勿自行针刺。若出现剧烈、持续、突发或反复加重的不适，请及时就医。</div>
+  </div>
+</section>
+
+<!-- SECTION: CONDITIONS_PLACEHOLDER -->
+<section id="conditions">
+  <div class="container">
+    <div class="eyebrow">CONDITIONS</div>
+    <h2>常见不适入口</h2>
+    <p style="color:#5b6b63">从普通人最关心的不适入手，理解针灸取穴的思路。所有内容仅供科普学习，不能替代医疗诊断。</p>
+    <div class="toc">
+      <a href="#c-stomach">胃不舒服</a>
+      <a href="#c-nausea">恶心反胃</a>
+      <a href="#c-headache">头痛</a>
+      <a href="#c-neck">肩颈紧张</a>
+      <a href="#c-sleep">睡眠不好</a>
+      <a href="#c-anxiety">焦虑紧张</a>
+      <a href="#c-menstrual">经期不适</a>
+      <a href="#c-lowback">腰背酸痛</a>
+    </div>
+    <p style="color:#5b6b63;font-size:13px;margin-top:10px">详细内容请滚动查看下方分节。</p>
+  </div>
+</section>
+
+<!-- SECTION: POINTS_PLACEHOLDER -->
+<section id="points">
+  <div class="container">
+    <div class="eyebrow">POINTS</div>
+    <h2>穴位图谱</h2>
+    <p style="color:#5b6b63">了解所属经络、传统用途与轻柔按揉的注意事项。共 20 个常用穴位。</p>
+    <div class="toc">
+      <a href="#p-st36">足三里 ST36</a>
+      <a href="#p-pc6">内关 PC6</a>
+      <a href="#p-li4">合谷 LI4</a>
+      <a href="#p-cv12">中脘 CV12</a>
+      <a href="#p-st25">天枢 ST25</a>
+      <a href="#p-sp4">公孙 SP4</a>
+      <a href="#p-sp6">三阴交 SP6</a>
+      <a href="#p-lr3">太冲 LR3</a>
+      <a href="#p-gb20">风池 GB20</a>
+      <a href="#p-gv20">百会 GV20</a>
+      <a href="#p-ht7">神门 HT7</a>
+      <a href="#p-ki3">太溪 KI3</a>
+      <a href="#p-sp9">阴陵泉 SP9</a>
+      <a href="#p-li11">曲池 LI11</a>
+      <a href="#p-cv4">关元 CV4</a>
+      <a href="#p-cv6">气海 CV6</a>
+      <a href="#p-cv17">膻中 CV17</a>
+      <a href="#p-gb21">肩井 GB21</a>
+      <a href="#p-bl40">委中 BL40</a>
+      <a href="#p-bl60">昆仑 BL60</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: MERIDIANS_PLACEHOLDER -->
+<section id="meridians">
+  <div class="container">
+    <div class="eyebrow">MERIDIANS</div>
+    <h2>经络入门</h2>
+    <p style="color:#5b6b63">经络是传统中医的学习框架，帮助理解为什么远处的穴位也可能用于局部不适。</p>
+    <div class="toc">
+      <a href="#m-stomach">足阳明胃经</a>
+      <a href="#m-spleen">足太阴脾经</a>
+      <a href="#m-liver">足厥阴肝经</a>
+      <a href="#m-pericardium">手厥阴心包经</a>
+      <a href="#m-li">手阳明大肠经</a>
+      <a href="#m-ren">任脉</a>
+      <a href="#m-heart">手少阴心经</a>
+      <a href="#m-kidney">足少阴肾经</a>
+      <a href="#m-gb">足少阳胆经</a>
+      <a href="#m-bladder">足太阳膀胱经</a>
+      <a href="#m-du">督脉</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: GUIDE_PLACEHOLDER -->
+<section id="guide">
+  <div class="container">
+    <div class="eyebrow">ACUPRESSURE</div>
+    <h2>安全按揉指南</h2>
+    <p style="color:#5b6b63">普通人可以做的，是温和的指腹按揉；不能做的，是自行针刺或剧烈刺激。</p>
+    <div class="entry">
+      <h3>基本原则</h3>
+      <ul>
+        <li>使用指腹，力度从轻开始，逐渐到舒适的酸胀感为止。</li>
+        <li>每个穴位每侧 30 秒到 1 分钟，配合缓慢呼吸。</li>
+        <li>不追求疼痛感；任何明显疼痛、麻木、心慌都应立即停止。</li>
+        <li>饭后立即、剧烈运动后、饮酒后不建议强力按揉。</li>
+        <li>本站不教授、不鼓励、不指导任何形式的自行针刺操作。</li>
+      </ul>
+      <h3>这些情况请不要按揉</h3>
+      <ul>
+        <li>皮肤破损、感染、明显肿痛或瘀斑区域</li>
+        <li>静脉曲张、血栓等血管问题相关部位</li>
+        <li>原因不明的剧烈或持续疼痛</li>
+        <li>发烧、出血倾向、严重慢性疾病急性期</li>
+      </ul>
+      <h3>孕期、儿童与老人</h3>
+      <ul>
+        <li>孕妇应避开三阴交、合谷、肩井、昆仑等传统上慎用的穴位，并咨询医生。</li>
+        <li>儿童和老人体质敏感，力度更要轻柔，时间更短。</li>
+        <li>任何按揉都不能替代医疗诊断与治疗。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="safety">
+  <div class="container">
+    <div class="eyebrow">SAFETY</div>
+    <h2>安全须知</h2>
+    <div class="entry">
+      <p>本站内容仅用于穴位知识科普与健康教育，不提供诊断或治疗建议。请勿自行针刺。若出现剧烈、持续、突发或反复加重的不适，请及时就医。</p>
+      <h3>本站会做的</h3>
+      <ul>
+        <li>用通俗中文科普常见穴位、经络与传统取穴思路。</li>
+        <li>提供普通人可以参考的轻柔按揉建议。</li>
+        <li>明确标注必须就医的"红旗"情况。</li>
+      </ul>
+      <h3>本站不会做的</h3>
+      <ul>
+        <li>不提供诊断、处方或治疗方案。</li>
+        <li>不教授任何形式的自行针刺。</li>
+        <li>不承诺特定健康改善效果。</li>
+      </ul>
+      <div class="redflag"><strong>🚨 请立即就医的常见情况：</strong>
+        <ul style="margin-top:8px">
+          <li>突发剧烈胸痛、呼吸困难、晕厥</li>
+          <li>突发剧烈头痛、肢体无力、口齿不清</li>
+          <li>剧烈、持续或反复加重的腹痛</li>
+          <li>呕血、便血、黑便、异常大量出血</li>
+          <li>外伤后的剧烈疼痛或功能障碍</li>
+          <li>怀孕期间的异常腹痛或出血</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="disclaimer">
+  <div class="container">
+    <div class="eyebrow">DISCLAIMER</div>
+    <h2>免责声明</h2>
+    <div class="entry">
+      <p>AcuPoint Atlas 穴位图谱（以下简称"本站"）所提供的内容仅用于穴位、经络与传统针灸理论的科普与健康教育，不构成任何形式的医疗建议、诊断或治疗方案。</p>
+      <p>本站不指导任何自行针刺操作。所有涉及侵入性医疗行为请寻求具备资质的执业医师。</p>
+      <p>使用本站内容产生的任何后果由使用者自行承担。如对自身健康状况存在疑问，请及时咨询医生。</p>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer class="site">
   <div class="container row">
-    <div>© <span id="year"></span> AcuPoint Atlas 穴位图谱 · 仅供穴位科普与健康教育</div>
-    <div><a href="#/safety">安全须知</a> · <a href="#/disclaimer">免责声明</a></div>
+    <div>© 2025 AcuPoint Atlas 穴位图谱 · 仅供穴位科普与健康教育</div>
+    <div><a href="#safety">安全须知</a> · <a href="#disclaimer">免责声明</a></div>
   </div>
 </footer>
 
-<script>
-window.onerror = function(msg, src, line, col, err){
-  var bar = document.getElementById('errbar');
-  if(bar){
-    bar.style.display='block';
-    bar.textContent='JS 错误: '+msg+' @'+line+':'+col+(err&&err.stack?'\n'+err.stack:'');
-  }
-  return false;
-};
-</script>
-
-<script>
-(function(){
-"use strict";
-
-var SAFETY = '本站内容仅用于穴位知识科普与健康教育，不提供诊断或治疗建议。请勿自行针刺。若出现剧烈、持续、突发或反复加重的不适，请及时就医。';
-
-var MERIDIANS = [
-  {slug:'stomach',name:'足阳明胃经',english:'Stomach Meridian',summary:'与面部、胸腹和下肢路径相关，是理解消化相关远端取穴思路的重要经络。',pathway:'从头面、胸腹延伸到下肢前外侧的传统经络路径。',themes:['胃肠与消化','面部胸腹','小腿远端'],points:['st36-zusanli','st25-tianshu']},
-  {slug:'spleen',name:'足太阴脾经',english:'Spleen Meridian',summary:'常见于脾胃、消化、水湿和下肢内侧相关讨论。',pathway:'从足部内侧沿下肢内侧向上的传统路径。',themes:['脾胃','水湿','下肢内侧'],points:['sp4-gongsun','sp6-sanyinjiao','sp9-yinlingquan']},
-  {slug:'liver',name:'足厥阴肝经',english:'Liver Meridian',summary:'与情绪、气机、压力和足部穴位的传统讨论联系在一起。',pathway:'从足部向上，与下腹、胸胁和情绪相关概念相连。',themes:['情绪压力','气机','足部'],points:['lr3-taichong']},
-  {slug:'pericardium',name:'手厥阴心包经',english:'Pericardium Meridian',summary:'与内关、胸腹不适、恶心和紧张相关讨论密切相关。',pathway:'经过胸部、上肢内侧到手部的传统路径。',themes:['内关','胸腹','紧张'],points:['pc6-neiguan']},
-  {slug:'large-intestine',name:'手阳明大肠经',english:'Large Intestine Meridian',summary:'合谷、曲池是代表穴位，常用于学习头面部、上肢与远端取穴思路。',pathway:'从手部沿上肢外侧到头面部的传统路径。',themes:['头面','上肢','远端取穴'],points:['li4-hegu','li11-quchi']},
-  {slug:'ren',name:'任脉',english:'Ren Vessel',summary:'位于人体前正中线，包含中脘、关元、气海、膻中等穴位。',pathway:'沿身体前正中线分布，涉及胸部、上腹和下腹区域。',themes:['腹部','胸部','正中线'],points:['cv12-zhongwan','cv4-guanyuan','cv6-qihai','cv17-danzhong']},
-  {slug:'heart',name:'手少阴心经',english:'Heart Meridian',summary:'与心神、睡眠、情绪相关讨论关联较多。',pathway:'从胸部沿上肢内侧到手部的传统路径。',themes:['心神','睡眠','腕部'],points:['ht7-shenmen']},
-  {slug:'kidney',name:'足少阴肾经',english:'Kidney Meridian',summary:'传统上与腰膝、疲劳、生殖等学习主题相关。',pathway:'从足底沿下肢内侧向上的传统路径。',themes:['腰膝','疲劳','下肢内侧'],points:['ki3-taixi']},
-  {slug:'gallbladder',name:'足少阳胆经',english:'Gallbladder Meridian',summary:'与头侧、肩颈、下肢外侧的传统取穴讨论相关。',pathway:'从头侧沿身体侧面到下肢外侧的传统路径。',themes:['肩颈','头侧','下肢外侧'],points:['gb20-fengchi','gb21-jianjing']},
-  {slug:'bladder',name:'足太阳膀胱经',english:'Bladder Meridian',summary:'路径最长的传统经络之一，涉及后背、下肢后侧。',pathway:'从头部沿后背、下肢后侧延伸到足部。',themes:['腰背','下肢后侧','远端取穴'],points:['bl40-weizhong','bl60-kunlun']},
-  {slug:'du',name:'督脉',english:'Du Vessel',summary:'位于人体后正中线，与头顶、脊柱相关。',pathway:'沿身体后正中线分布。',themes:['头顶','脊柱','督脉'],points:['gv20-baihui']}
-];
-
-var TIPS = ['可用指腹轻柔按揉相关区域','每侧约30秒到1分钟','以舒适或轻微酸胀为度','配合缓慢呼吸，不追求疼痛感'];
-
-var POINTS = [
-  {slug:'st36-zusanli',name:'足三里',pinyin:'Zusanli',code:'ST36',meridian:'stomach',region:'小腿',summary:'传统针灸学习中非常经典的穴位，常见于消化、体力恢复和脾胃调理相关讨论。',location:'位于小腿前外侧，膝盖下方附近。',uses:['胃肠不适','食欲与消化','疲劳乏力','脾胃调理','日常保健'],why:'足三里属于胃经，是学习胃经和消化相关穴位时经常遇到的代表性穴位。',tips:['拇指轻柔按压','每侧30秒到1分钟','以酸胀为宜','配合缓慢呼吸'],cautions:['请勿自行针刺','饭后不要强力按揉','皮肤破损时避免','症状严重应就医'],conditions:['stomach-discomfort','nausea'],tags:['胃经','消化','小腿','保健']},
-  {slug:'pc6-neiguan',name:'内关',pinyin:'Neiguan',code:'PC6',meridian:'pericardium',region:'前臂',summary:'常见于恶心、胸腹不适、紧张和情绪相关讨论中。',location:'位于前臂内侧，手腕横纹上方一带。',uses:['恶心反胃','胸腹不适','紧张焦虑','晕车按揉'],why:'内关是前臂上的经典穴位，常用于解释为何腹部或恶心问题可能取手臂上的穴位。',tips:['另一只手拇指轻柔按压','保持呼吸平稳','不需用力过猛'],cautions:['请勿自行针刺','局部疼痛或破损时不要按揉','胸痛、呼吸困难应立即就医'],conditions:['nausea','anxiety','stomach-discomfort'],tags:['心包经','恶心','前臂','焦虑']},
-  {slug:'li4-hegu',name:'合谷',pinyin:'Hegu',code:'LI4',meridian:'large-intestine',region:'手部',summary:'手部常见穴位，传统上常见于头面部不适、紧张和疼痛相关讨论。',location:'位于手背拇指与食指之间的区域。',uses:['头痛','面部不适','紧张相关','上肢不适'],why:'合谷常用于说明远端取穴的思路。',tips:['另一只手拇指轻柔按压虎口','以酸胀感为度','不要按到明显疼痛'],cautions:['孕妇慎用','请勿自行针刺','皮肤破损时避免'],conditions:['headache','neck-shoulder-tension'],tags:['大肠经','手部','头痛','孕妇慎用']},
-  {slug:'cv12-zhongwan',name:'中脘',pinyin:'Zhongwan',code:'CV12',meridian:'ren',region:'腹部',summary:'位于上腹部区域，与胃部和消化相关讨论较多。',location:'位于上腹部正中线一带。',uses:['胃部不适','消化不良','腹胀'],why:'中脘靠近胃部区域，常用于解释局部取穴。',tips:['轻柔按揉上腹正中','饭后不立即按揉','力度轻柔'],cautions:['腹痛剧烈不要自行处理','孕期咨询医生','请勿自行针刺'],conditions:['stomach-discomfort','nausea'],tags:['任脉','腹部','胃部','消化']},
-  {slug:'st25-tianshu',name:'天枢',pinyin:'Tianshu',code:'ST25',meridian:'stomach',region:'腹部',summary:'腹部常见穴位，传统上与肠道和腹部不适相关讨论较多。',location:'位于肚脐两侧附近区域。',uses:['腹胀','便秘','腹泻','腹部不适'],why:'天枢帮助理解腹部局部穴位和胃肠功能的传统关联。',tips:['环形按揉肚脐两侧','避免饭后强力按压','不适时停止'],cautions:['剧烈腹痛、发热应就医','孕妇慎重','请勿自行针刺'],conditions:['stomach-discomfort','lower-back-soreness'],tags:['胃经','腹部','便秘']},
-  {slug:'sp4-gongsun',name:'公孙',pinyin:'Gongsun',code:'SP4',meridian:'spleen',region:'足部',summary:'位于足部，常见于脾胃和胸腹部不适相关讨论。',location:'位于足内侧区域，靠近第一跖骨附近。',uses:['胃部不适','腹胀','消化问题'],why:'公孙用于解释为何胃肠不适可能取脚上的穴位。',tips:TIPS,cautions:['足部有伤口时避免','请勿自行针刺'],conditions:['stomach-discomfort','nausea'],tags:['脾经','足部','远端取穴']},
-  {slug:'sp6-sanyinjiao',name:'三阴交',pinyin:'Sanyinjiao',code:'SP6',meridian:'spleen',region:'小腿',summary:'传统针灸中非常重要的穴位，常见于妇科、睡眠、脾胃和下肢相关讨论。',location:'位于小腿内侧，内踝上方一带。',uses:['经期不适','睡眠','脾胃调理','下肢不适'],why:'三阴交被认为与多条阴经交会有关。',tips:['轻柔按揉小腿内侧','不要强刺激','不适时停止'],cautions:['孕妇慎用','请勿自行针刺','静脉曲张时避免'],conditions:['menstrual-discomfort','poor-sleep','stomach-discomfort'],tags:['脾经','小腿','经期','孕妇慎用']},
-  {slug:'lr3-taichong',name:'太冲',pinyin:'Taichong',code:'LR3',meridian:'liver',region:'足部',summary:'足部经典穴位，常见于情绪紧张、头痛和气机不畅相关讨论。',location:'位于足背第一、二跖骨之间区域。',uses:['情绪紧张','头痛','压力相关','气机不畅'],why:'太冲常用于理解肝经和情绪、压力之间的传统联系。',tips:['拇指轻柔按压足背','配合缓慢呼吸','不要按到明显疼痛'],cautions:['足部伤口时避免','请勿自行针刺'],conditions:['anxiety','headache','poor-sleep'],tags:['肝经','足部','压力','头痛']},
-  {slug:'gb20-fengchi',name:'风池',pinyin:'Fengchi',code:'GB20',meridian:'gallbladder',region:'后颈部',summary:'常见于头痛、头项不适和肩颈紧张相关讨论。',location:'位于后颈部靠近头颅底部两侧区域。',uses:['头痛','肩颈紧张','头项不适'],why:'风池帮助理解头颈局部穴位与头项不适的传统关联。',tips:['指腹轻柔按揉后颈两侧','避免压迫喉颈','头晕应停止'],cautions:['颈部不要强力按压','请勿自行针刺','突发头痛应就医'],conditions:['headache','neck-shoulder-tension'],tags:['胆经','后颈部','头痛','肩颈']},
-  {slug:'gv20-baihui',name:'百会',pinyin:'Baihui',code:'GV20',meridian:'du',region:'头顶部',summary:'头顶部经典穴位，常见于精神紧张、头部不适和传统学习中。',location:'位于头顶部正中附近。',uses:['精神紧张','头部不适','传统学习'],why:'百会常用于说明督脉和头顶部穴位的地位。',tips:['指腹轻柔点按头顶','力度要轻','头晕时停止'],cautions:['头部不适严重应就医','请勿自行针刺'],conditions:['headache','poor-sleep'],tags:['督脉','头部','放松','睡眠']},
-  {slug:'ht7-shenmen',name:'神门',pinyin:'Shenmen',code:'HT7',meridian:'heart',region:'腕部',summary:'常见于睡眠、紧张和心神相关传统讨论。',location:'位于腕部掌侧靠近小指一侧。',uses:['睡眠','紧张不安','情绪放松'],why:'神门是学习心经的代表穴位。',tips:TIPS,cautions:['腕部疼痛麻木时不要按揉','请勿自行针刺'],conditions:['poor-sleep','anxiety'],tags:['心经','腕部','睡眠','情绪']},
-  {slug:'ki3-taixi',name:'太溪',pinyin:'Taixi',code:'KI3',meridian:'kidney',region:'踝部',summary:'踝部常见穴位，常见于疲劳、腰膝和肾经学习相关讨论。',location:'位于内踝附近区域。',uses:['疲劳','腰膝不适','肾经学习'],why:'太溪帮助理解足少阴肾经的学习主题。',tips:TIPS,cautions:['踝部受伤时不要按揉','请勿自行针刺'],conditions:['lower-back-soreness'],tags:['肾经','踝部','疲劳','腰膝']},
-  {slug:'sp9-yinlingquan',name:'阴陵泉',pinyin:'Yinlingquan',code:'SP9',meridian:'spleen',region:'小腿内侧',summary:'常见于水湿、下肢和脾经学习相关讨论。',location:'位于小腿内侧膝下附近。',uses:['湿重相关','下肢不适','脾经学习'],why:'阴陵泉是理解脾经和水湿概念时常见的穴位。',tips:TIPS,cautions:['局部肿痛时避免','请勿自行针刺'],conditions:['stomach-discomfort'],tags:['脾经','小腿','水湿','下肢']},
-  {slug:'li11-quchi',name:'曲池',pinyin:'Quchi',code:'LI11',meridian:'large-intestine',region:'肘部',summary:'肘部常见穴位，传统上见于上肢和清热相关讨论。',location:'位于肘部外侧附近。',uses:['上肢不适','清热','大肠经学习'],why:'曲池与合谷一起用于理解手阳明大肠经。',tips:TIPS,cautions:['肘部损伤时避免','请勿自行针刺'],conditions:['neck-shoulder-tension'],tags:['大肠经','肘部','上肢']},
-  {slug:'cv4-guanyuan',name:'关元',pinyin:'Guanyuan',code:'CV4',meridian:'ren',region:'下腹部',summary:'位于下腹部正中区域，常见于元气、下腹和保健相关讨论。',location:'位于下腹部正中线一带。',uses:['元气相关','下腹保健','经期不适'],why:'关元是学习任脉和下腹部穴位的代表穴位。',tips:['隔衣物轻柔按揉','腹痛原因不明时避免','不追求强刺激'],cautions:['孕期慎','请勿自行针刺'],conditions:['menstrual-discomfort'],tags:['任脉','下腹','经期','保健']},
-  {slug:'cv6-qihai',name:'气海',pinyin:'Qihai',code:'CV6',meridian:'ren',region:'下腹部',summary:'下腹部任脉穴位，常见于气虚、疲劳和下腹保健相关讨论。',location:'位于下腹部正中线一带。',uses:['气虚','疲劳','下腹保健'],why:'气海帮助理解任脉下腹部穴位与传统保健概念。',tips:['轻柔按揉下腹正中','孕期慎用','不适时停止'],cautions:['孕期慎用','请勿自行针刺'],conditions:['menstrual-discomfort','lower-back-soreness'],tags:['任脉','下腹','疲劳','气虚']},
-  {slug:'cv17-danzhong',name:'膻中',pinyin:'Danzhong',code:'CV17',meridian:'ren',region:'胸部',summary:'位于胸部正中区域，常见于胸闷、情绪和呼吸相关讨论。',location:'位于胸骨前方正中一带。',uses:['胸闷','情绪紧张','呼吸相关'],why:'膻中常用于解释任脉胸部穴位和情绪、胸腹感受的传统联系。',tips:['轻柔抚按胸前正中','胸痛或气短时不要自行处理','呼吸平稳'],cautions:['胸痛、呼吸困难应立即就医','请勿自行针刺'],conditions:['anxiety'],tags:['任脉','胸部','情绪','呼吸']},
-  {slug:'gb21-jianjing',name:'肩井',pinyin:'Jianjing',code:'GB21',meridian:'gallbladder',region:'肩部',summary:'位于肩部，常见于肩颈紧张相关讨论。',location:'位于肩上区域。',uses:['肩颈紧张','上背不适','胆经学习'],why:'肩井用于说明局部肩颈穴位的应用思路。',tips:['轻柔揉按肩上肌肉','不要用肘部重压','孕妇避免强刺激'],cautions:['孕妇慎用','肩颈不要强刺激','请勿自行针刺'],conditions:['neck-shoulder-tension'],tags:['胆经','肩部','孕妇慎用']},
-  {slug:'bl40-weizhong',name:'委中',pinyin:'Weizhong',code:'BL40',meridian:'bladder',region:'膝后',summary:'位于膝后，常见于腰背酸痛和下肢不适相关讨论。',location:'位于膝关节后方区域。',uses:['腰背酸痛','下肢不适','膀胱经学习'],why:'委中帮助理解腰背问题为何关注下肢穴位。',tips:['指腹轻柔按揉膝后','避免深压','不适立即停止'],cautions:['膝后血管神经丰富，只可轻柔','请勿自行针刺'],conditions:['lower-back-soreness'],tags:['膀胱经','膝后','腰背']},
-  {slug:'bl60-kunlun',name:'昆仑',pinyin:'Kunlun',code:'BL60',meridian:'bladder',region:'踝部',summary:'位于踝部，常见于腰背、头项和下肢相关讨论。',location:'位于外踝附近区域。',uses:['腰背','头项','下肢不适'],why:'昆仑用于说明膀胱经下肢远端穴位与腰背头项的传统联系。',tips:TIPS,cautions:['孕妇慎用','踝部受伤时避免','请勿自行针刺'],conditions:['lower-back-soreness'],tags:['膀胱经','踝部','腰背','孕妇慎用']}
-];
-
-var BASE_WHY = [
-  {title:'局部穴位',description:'接近不适区域的穴位常用于解释局部调理思路。'},
-  {title:'远端穴位',description:'手、足或小腿穴位帮助理解经络远端取穴的传统逻辑。'},
-  {title:'整体状态',description:'专业人士会结合伴随表现、体质和触诊情况综合判断。'}
-];
-
-var CONDITIONS = [
-  {slug:'stomach-discomfort',shortTitle:'胃不舒服',title:'胃不舒服 / 胃痉挛时，针灸医生为什么取腹部、手臂、小腿和脚上的穴位？',summary:'从胃部局部穴位、胃经远端穴位和前臂穴位，理解针灸处理胃部不适时的常见取穴思路。',intro:'胃部突然绞痛、痉挛样不适，可能与冷饮、进食过快、压力、胃肠功能紊乱有关。',perspectives:['寒邪犯胃','胃气不和','脾胃虚寒','气机不畅','饮食积滞'],why:[{title:'腹部穴位',description:'接近胃肠区域，常用于解释局部调理。'},{title:'手臂穴位',description:'如内关，常与恶心、胸腹不适联系在一起。'},{title:'小腿穴位',description:'如足三里属于胃经，是消化相关内容中非常常见的穴位。'},{title:'脚部穴位',description:'远端穴位用于解释经络远端取穴和整体调节。'}],points:['cv12-zhongwan','st36-zusanli','pc6-neiguan','st25-tianshu','sp4-gongsun','lr3-taichong'],acupressure:['轻柔按揉足三里、内关','腹部按揉要轻柔','以舒适、轻微酸胀为度','不要自行针刺'],redFlags:['剧烈腹痛','持续不缓解','发烧','反复呕吐','呕血','黑便','胸痛','呼吸困难','怀孕期间腹痛'],tags:['胃','腹痛','消化']},
-  {slug:'nausea',shortTitle:'恶心反胃',title:'恶心反胃时，为什么内关等前臂穴位常被提到？',summary:'理解内关、足三里、中脘和公孙在恶心反胃相关传统讨论中的位置。',intro:'恶心反胃可与饮食、晕车、压力、胃肠功能紊乱有关。反复或严重呕吐需先考虑医学评估。',perspectives:['胃气上逆','饮食不和','痰湿中阻','情绪影响脾胃'],why:[{title:'前臂内关',description:'内关传统上与恶心、胸腹不适和紧张感联系在一起。'},{title:'局部穴位',description:'接近不适区域的穴位常用于解释局部调理思路。'},{title:'远端穴位',description:'手、足或小腿穴位帮助理解经络远端取穴的传统逻辑。'},{title:'整体状态',description:'专业人士会结合伴随表现、体质和触诊情况综合判断。'}],points:['pc6-neiguan','st36-zusanli','cv12-zhongwan','sp4-gongsun'],acupressure:['轻柔按揉内关','保持呼吸平稳','腹部力度要轻','不要自行针刺'],redFlags:['频繁呕吐','无法进水','脱水','呕血','黑便','怀孕期间剧烈呕吐'],tags:['恶心','反胃','晕车']},
-  {slug:'headache',shortTitle:'头痛',title:'头痛时，为什么可能关注手部、足部、后颈和头顶部穴位？',summary:'从合谷、太冲、风池、百会理解头痛相关的远端和局部取穴思路。',intro:'头痛原因很多，可能与睡眠、压力、颈肩紧张、感染有关。突发或异常头痛不能自行处理。',perspectives:['风邪上扰','肝阳偏亢','气血不畅','颈项紧张'],why:BASE_WHY,points:['li4-hegu','lr3-taichong','gb20-fengchi','gv20-baihui'],acupressure:['轻柔按揉手部、足部或后颈','颈部不要强力按压','头晕加重时停止','不要自行针刺'],redFlags:['突发剧烈头痛','肢体无力','说话不清','高烧','颈项强直','视物模糊','头部外伤后'],tags:['头痛','头颈','压力']},
-  {slug:'neck-shoulder-tension',shortTitle:'肩颈紧张',title:'肩颈紧张时，为什么会同时看颈部、肩部和手臂穴位？',summary:'理解风池、肩井、合谷、曲池在肩颈紧张相关讨论中的作用。',intro:'肩颈紧张常与久坐、压力、姿势和睡眠有关，也可能与外伤或神经受压相关。',perspectives:['经络不畅','风寒束表','筋肉紧张','气血不利'],why:BASE_WHY,points:['gb20-fengchi','gb21-jianjing','li4-hegu','li11-quchi'],acupressure:['肩颈只做轻柔按揉','避免按压颈前方','肩井孕妇慎用','不要自行针刺'],redFlags:['手臂麻木无力','胸痛','外伤后疼痛','头晕明显','疼痛持续加重'],tags:['肩颈','久坐','上肢']},
-  {slug:'poor-sleep',shortTitle:'睡眠不好',title:'睡眠不好时，传统上会如何理解放松与安神相关穴位？',summary:'认识神门、三阴交、百会、太冲等常见于睡眠和放松相关讨论的穴位。',intro:'睡眠不好可能与压力、作息、环境、情绪有关。本站仅提供传统理论学习参考。',perspectives:['心神不宁','肝郁气滞','阴血不足','脾胃不和'],why:BASE_WHY,points:['ht7-shenmen','sp6-sanyinjiao','gv20-baihui','lr3-taichong'],acupressure:['睡前轻柔按揉腕部或足部','避免强刺激','配合放松呼吸','不要自行针刺'],redFlags:['长期严重失眠','明显情绪低落','白天功能严重受影响','胸闷心悸明显','依赖酒精入睡'],tags:['睡眠','放松','安神']},
-  {slug:'anxiety',shortTitle:'焦虑紧张',title:'焦虑紧张时，内关、神门、太冲和膻中为什么常被提到？',summary:'从胸腹、腕部和足部穴位理解情绪紧张相关传统讨论。',intro:'焦虑紧张可能是短暂压力反应，也可能需要心理或医学支持。按揉不能替代专业帮助。',perspectives:['肝气郁结','心神不宁','气机不畅','胸中气滞'],why:BASE_WHY,points:['pc6-neiguan','ht7-shenmen','lr3-taichong','cv17-danzhong'],acupressure:['轻柔按揉内关、神门或太冲','胸前只做轻柔抚按','配合缓慢呼吸','不要自行针刺'],redFlags:['胸痛','呼吸困难','自伤想法','惊恐反复发作','严重影响生活','晕厥'],tags:['焦虑','紧张','情绪']},
-  {slug:'menstrual-discomfort',shortTitle:'经期不适',title:'经期不适时，为什么腹部、小腿和足部穴位常被讨论？',summary:'认识三阴交、关元、气海、太冲等经期不适相关传统穴位。',intro:'经期不适程度因人而异。剧烈疼痛、异常出血或怀孕可能时应及时就医。',perspectives:['寒凝胞宫','气滞血瘀','肝郁气滞','气血不足'],why:BASE_WHY,points:['sp6-sanyinjiao','cv4-guanyuan','cv6-qihai','lr3-taichong'],acupressure:['腹部按揉要轻柔','小腿和足部不做强刺激','孕妇慎用三阴交、合谷等','不要自行针刺'],redFlags:['经期剧烈疼痛','异常大量出血','怀孕可能','发热','晕厥'],tags:['经期','下腹','女性健康']},
-  {slug:'lower-back-soreness',shortTitle:'腰背酸痛',title:'腰背酸痛时，为什么可能关注膝后、踝部和下腹穴位？',summary:'理解委中、昆仑、太溪、气海在腰背酸痛相关传统讨论中的位置。',intro:'腰背酸痛常与姿势、劳损、久坐有关，也可能来自外伤、神经压迫或内科问题。',perspectives:['肾虚腰痛','寒湿阻络','气血不畅','劳损筋骨'],why:BASE_WHY,points:['bl40-weizhong','bl60-kunlun','ki3-taixi','cv6-qihai'],acupressure:['膝后只可轻柔按揉','踝部受伤时避免','下腹按揉要谨慎','不要自行针刺'],redFlags:['外伤后疼痛','下肢无力麻木','大小便异常','发热','夜间痛明显','老年人突然严重腰痛'],tags:['腰背','久坐','下肢']}
-];
-
-var POPULAR = ['st36-zusanli','pc6-neiguan','li4-hegu','cv12-zhongwan','sp6-sanyinjiao','lr3-taichong','st25-tianshu','gb20-fengchi'];
-
-/* ===== 工具 ===== */
-function esc(s){
-  if(s==null)return '';
-  return String(s).replace(/[&<>"']/g,function(c){
-    return c==='&'?'&amp;':c==='<'?'&lt;':c==='>'?'&gt;':c==='"'?'&quot;':'&#39;';
-  });
-}
-function findPoint(slug){for(var i=0;i<POINTS.length;i++){if(POINTS[i].slug===slug)return POINTS[i];}return null;}
-function findMeridian(slug){for(var i=0;i<MERIDIANS.length;i++){if(MERIDIANS[i].slug===slug)return MERIDIANS[i];}return null;}
-function findCondition(slug){for(var i=0;i<CONDITIONS.length;i++){if(CONDITIONS[i].slug===slug)return CONDITIONS[i];}return null;}
-
-var SAFETY_HTML = '<div class="notice"><strong>安全提示：</strong>'+esc(SAFETY)+'</div>';
-
-function tagsHtml(arr,max){
-  if(!arr||!arr.length)return '';
-  var n=max||arr.length;
-  var out='';
-  for(var i=0;i<Math.min(n,arr.length);i++){out+='<span class="tag">'+esc(arr[i])+'</span>';}
-  return out;
-}
-
-function pointCard(p){
-  if(!p)return '';
-  var m=findMeridian(p.meridian);
-  return '<a class="card" href="#/points/'+esc(p.slug)+'">'
-    +'<div class="meta">'+esc(p.code)+' · '+esc(m?m.name:'')+'</div>'
-    +'<h3>'+esc(p.name)+' <span style="color:#5b6b63;font-weight:400;font-size:13px">'+esc(p.pinyin)+'</span></h3>'
-    +'<p>'+esc(p.summary)+'</p>'
-    +'<div class="tags">'+tagsHtml(p.tags,3)+'</div>'
-    +'</a>';
-}
-function conditionCard(c){
-  if(!c)return '';
-  return '<a class="card" href="#/conditions/'+esc(c.slug)+'">'
-    +'<div class="meta">常见不适</div>'
-    +'<h3>'+esc(c.shortTitle)+'</h3>'
-    +'<p>'+esc(c.summary)+'</p>'
-    +'<div class="tags">'+tagsHtml(c.tags,3)+'</div>'
-    +'</a>';
-}
-function meridianCard(m){
-  if(!m)return '';
-  return '<a class="card" href="#/meridians/'+esc(m.slug)+'">'
-    +'<div class="meta">'+esc(m.english||'Meridian')+'</div>'
-    +'<h3>'+esc(m.name)+'</h3>'
-    +'<p>'+esc(m.summary)+'</p>'
-    +'<div class="tags">'+tagsHtml(m.themes,3)+'</div>'
-    +'</a>';
-}
-
-function listHtml(arr){
-  if(!arr||!arr.length)return '';
-  var out='<ul>';
-  for(var i=0;i<arr.length;i++)out+='<li>'+esc(arr[i])+'</li>';
-  return out+'</ul>';
-}
-function pillsHtml(arr){
-  if(!arr||!arr.length)return '';
-  var out='';
-  for(var i=0;i<arr.length;i++)out+='<span class="pill">'+esc(arr[i])+'</span>';
-  return out;
-}
-
-/* ===== 视图 ===== */
-function viewHome(){
-  var popHtml='';
-  for(var i=0;i<POPULAR.length;i++){popHtml+=pointCard(findPoint(POPULAR[i]));}
-  var condHtml='';
-  for(var j=0;j<CONDITIONS.length;j++){condHtml+=conditionCard(CONDITIONS[j]);}
-  return ''
-    +'<section class="hero"><div class="container">'
-    +'<div class="eyebrow">中文穴位科普 · 安全按揉参考</div>'
-    +'<h1>AcuPoint Atlas 穴位图谱</h1>'
-    +'<p class="lead">看懂针灸医生为什么这样取穴，学习常见穴位、经络逻辑与安全按揉方法。本站为科普网站，不提供诊断或针刺指导。</p>'
-    +'<div class="cta"><a class="btn primary" href="#/conditions">查看常见不适</a><a class="btn outline" href="#/points">浏览穴位图谱</a><a class="btn outline" href="#/safety">阅读安全须知</a></div>'
-    +'<form id="homeSearch" class="search"><input name="q" placeholder="搜索穴位、经络或常见不适（如 足三里、头痛、胃经）" /><button type="submit">搜索</button></form>'
-    +'</div></section>'
-    +'<div class="container">'
-    +'<section class="block">'+SAFETY_HTML+'</section>'
-    +'<section class="block"><div class="section-head"><div class="eyebrow">CONDITIONS</div><h2>常见不适入口</h2><p>用于理解针灸取穴思路和安全按揉方法，不用于自我诊断。</p></div><div class="cards">'+condHtml+'</div></section>'
-    +'<section class="block"><div class="section-head"><div class="eyebrow">POPULAR POINTS</div><h2>热门穴位</h2><p>从常见、经典且便于科普理解的穴位开始。</p></div><div class="cards">'+popHtml+'</div></section>'
-    +'</div>';
-}
-
-function viewConditions(){
-  var html='';
-  for(var i=0;i<CONDITIONS.length;i++)html+=conditionCard(CONDITIONS[i]);
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 常见不适</div>'
-    +'<div class="section-head" style="margin-top:18px"><div class="eyebrow">CONDITIONS</div><h2>常见不适入口</h2><p>从普通人最关心的不适入手，理解针灸取穴的思路。</p></div>'
-    +'<div class="cards">'+html+'</div></div>';
-}
-
-function viewConditionDetail(slug){
-  var c=findCondition(slug);
-  if(!c)return viewNotFound('未找到该条目：'+slug);
-  var ptsHtml='';
-  for(var i=0;i<(c.points||[]).length;i++){ptsHtml+=pointCard(findPoint(c.points[i]));}
-  var whyHtml='<ul>';
-  for(var j=0;j<(c.why||[]).length;j++){var w=c.why[j];whyHtml+='<li><strong>'+esc(w.title)+'：</strong>'+esc(w.description)+'</li>';}
-  whyHtml+='</ul>';
-  var rfHtml='<ul style="margin-top:8px">';
-  for(var k=0;k<(c.redFlags||[]).length;k++)rfHtml+='<li>'+esc(c.redFlags[k])+'</li>';
-  rfHtml+='</ul>';
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / <a href="#/conditions">常见不适</a> / '+esc(c.shortTitle)+'</div>'
-    +'<article class="detail"><div class="meta">常见不适</div><h1>'+esc(c.title)+'</h1>'
-    +'<p style="color:#5b6b63">'+esc(c.intro)+'</p>'
-    +'<div class="tags">'+tagsHtml(c.tags)+'</div>'
-    +'<h3>传统中医常见解释角度</h3><div>'+pillsHtml(c.perspectives)+'</div>'
-    +'<h3>为什么可能会取这些穴位？</h3>'+whyHtml
-    +'<h3>相关穴位</h3><div class="cards">'+ptsHtml+'</div>'
-    +'<h3>普通人可以做的安全按揉</h3>'+listHtml(c.acupressure)
-    +'<div class="redflag"><strong>🚨 出现以下情况应及时就医：</strong>'+rfHtml+'</div>'
-    +SAFETY_HTML+'</article></div>';
-}
-
-function viewPoints(){
-  var html='';
-  for(var i=0;i<POINTS.length;i++)html+=pointCard(POINTS[i]);
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 穴位图谱</div>'
-    +'<div class="section-head" style="margin-top:18px"><div class="eyebrow">POINTS</div><h2>穴位图谱</h2><p>了解所属经络、传统用途与轻柔按揉的注意事项。</p></div>'
-    +'<div style="margin-bottom:18px"><input id="pointFilter" placeholder="筛选穴位、拼音、代码、标签…" style="width:100%;max-width:480px;padding:10px 14px;border-radius:999px;border:1px solid #e3ddd0;background:#fff;outline:none" /></div>'
-    +'<div class="cards" id="pointsGrid">'+html+'</div></div>';
-}
-
-function viewPointDetail(slug){
-  var p=findPoint(slug);
-  if(!p)return viewNotFound('未找到该穴位：'+slug);
-  var m=findMeridian(p.meridian);
-  var relHtml='';
-  for(var i=0;i<(p.conditions||[]).length;i++){relHtml+=conditionCard(findCondition(p.conditions[i]));}
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / <a href="#/points">穴位图谱</a> / '+esc(p.name)+'</div>'
-    +'<article class="detail"><div class="meta">'+esc(p.code)+' · '+esc(m?m.name:'')+'</div>'
-    +'<h1>'+esc(p.name)+' <span style="color:#5b6b63;font-weight:500;font-size:18px">'+esc(p.pinyin)+'</span></h1>'
-    +'<p style="color:#5b6b63">'+esc(p.summary)+'</p>'
-    +'<dl class="kv"><dt>编号</dt><dd>'+esc(p.code)+'</dd><dt>所属经络</dt><dd>'+(m?'<a href="#/meridians/'+esc(m.slug)+'">'+esc(m.name)+'</a>':'-')+'</dd><dt>所在部位</dt><dd>'+esc(p.region)+'</dd></dl>'
-    +'<h3>大致位置</h3><p>'+esc(p.location)+'</p>'
-    +'<h3>传统用途</h3>'+listHtml(p.uses)
-    +'<h3>为什么在科普中很重要</h3><p>'+esc(p.why)+'</p>'
-    +'<h3>安全按揉小贴士</h3>'+listHtml(p.tips)
-    +'<div class="redflag"><strong>⚠️ 注意事项：</strong>'+listHtml(p.cautions).replace('<ul>','<ul style="margin-top:8px">')+'</div>'
-    +'<h3>相关常见不适</h3><div class="cards">'+relHtml+'</div>'
-    +SAFETY_HTML+'</article></div>';
-}
-
-function viewMeridians(){
-  var html='';
-  for(var i=0;i<MERIDIANS.length;i++)html+=meridianCard(MERIDIANS[i]);
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 经络入门</div>'
-    +'<div class="section-head" style="margin-top:18px"><div class="eyebrow">MERIDIANS</div><h2>经络入门</h2><p>经络是传统中医的学习框架，帮助理解为什么远处的穴位也可能用于局部不适。</p></div>'
-    +'<div class="cards">'+html+'</div></div>';
-}
-
-function viewMeridianDetail(slug){
-  var m=findMeridian(slug);
-  if(!m)return viewNotFound('未找到该经络：'+slug);
-  var ptsHtml='';
-  for(var i=0;i<(m.points||[]).length;i++){ptsHtml+=pointCard(findPoint(m.points[i]));}
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / <a href="#/meridians">经络入门</a> / '+esc(m.name)+'</div>'
-    +'<article class="detail"><div class="meta">'+esc(m.english||'Meridian')+'</div><h1>'+esc(m.name)+'</h1>'
-    +'<p style="color:#5b6b63">'+esc(m.summary)+'</p>'
-    +'<h3>路径概览</h3><p>'+esc(m.pathway)+'</p>'
-    +'<h3>常见学习主题</h3><div>'+pillsHtml(m.themes)+'</div>'
-    +'<h3>相关穴位</h3><div class="cards">'+ptsHtml+'</div>'
-    +'<h3>学习提示</h3><p style="color:#5b6b63">经络内容属于传统中医理论学习框架，不能替代现代医学诊断。</p>'
-    +SAFETY_HTML+'</article></div>';
-}
-
-function viewGuide(){
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 按揉指南</div>'
-    +'<div class="section-head" style="margin-top:18px"><div class="eyebrow">ACUPRESSURE</div><h2>安全按揉指南</h2><p>普通人可以做的，是温和的指腹按揉；不能做的，是自行针刺或剧烈刺激。</p></div>'
-    +'<article class="detail">'
-    +'<h3>基本原则</h3><ul><li>使用指腹，力度从轻开始。</li><li>每个穴位每侧 30 秒到 1 分钟。</li><li>不追求疼痛感；明显不适立即停止。</li><li>饭后、剧烈运动后、饮酒后不建议强力按揉。</li><li>本站不指导任何自行针刺。</li></ul>'
-    +'<h3>不要按揉的情况</h3><ul><li>皮肤破损、感染、明显肿痛或瘀斑</li><li>静脉曲张、血栓等血管问题相关部位</li><li>原因不明的剧烈或持续疼痛</li><li>发烧、出血倾向、严重慢性疾病急性期</li></ul>'
-    +'<h3>孕期、儿童与老人</h3><ul><li>孕妇应避开三阴交、合谷、肩井、昆仑等传统上慎用的穴位，并咨询医生。</li><li>儿童和老人体质敏感，力度更要轻柔。</li><li>按揉不能替代医疗诊断与治疗。</li></ul>'
-    +SAFETY_HTML+'</article></div>';
-}
-
-function viewSafety(){
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 安全须知</div>'
-    +'<article class="detail"><div class="meta">SAFETY</div><h1>安全须知</h1><p>'+esc(SAFETY)+'</p>'
-    +'<h3>本站会做的</h3><ul><li>用通俗中文科普常见穴位、经络与传统取穴思路。</li><li>提供普通人可以参考的轻柔按揉建议。</li><li>明确标注必须就医的"红旗"情况。</li></ul>'
-    +'<h3>本站不会做的</h3><ul><li>不提供诊断、处方或治疗方案。</li><li>不教授任何形式的自行针刺。</li><li>不承诺特定健康改善效果。</li></ul>'
-    +'<div class="redflag"><strong>🚨 请立即就医的常见情况：</strong><ul style="margin-top:8px"><li>突发剧烈胸痛、呼吸困难、晕厥</li><li>突发剧烈头痛、肢体无力、口齿不清</li><li>剧烈、持续或反复加重的腹痛</li><li>呕血、便血、黑便、异常大量出血</li><li>外伤后的剧烈疼痛或功能障碍</li><li>怀孕期间的异常腹痛或出血</li></ul></div>'
-    +'</article></div>';
-}
-
-function viewDisclaimer(){
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 免责声明</div>'
-    +'<article class="detail"><h1>免责声明</h1>'
-    +'<p>AcuPoint Atlas 穴位图谱所提供的内容仅用于穴位、经络与传统针灸理论的科普与健康教育，不构成任何形式的医疗建议、诊断或治疗方案。</p>'
-    +'<p>本站不指导任何自行针刺操作。所有涉及侵入性医疗行为请寻求具备资质的执业医师。</p>'
-    +'<p>使用本站内容产生的任何后果由使用者自行承担。</p>'
-    +'</article></div>';
-}
-
-function viewSearch(q){
-  q=(q||'').trim();
-  var ql=q.toLowerCase();
-  var rs=[];
-  if(ql){
-    for(var i=0;i<POINTS.length;i++){
-      var p=POINTS[i];
-      var hay=[p.name,p.pinyin,p.code,p.summary,p.region].concat(p.tags||[]).join('|').toLowerCase();
-      if(hay.indexOf(ql)>=0)rs.push({type:'穴位',title:p.name+' '+p.code,desc:p.summary,href:'#/points/'+p.slug});
-    }
-    for(var j=0;j<CONDITIONS.length;j++){
-      var c=CONDITIONS[j];
-      var hay2=[c.title,c.shortTitle,c.summary,c.intro].concat(c.tags||[]).join('|').toLowerCase();
-      if(hay2.indexOf(ql)>=0)rs.push({type:'常见不适',title:c.shortTitle,desc:c.summary,href:'#/conditions/'+c.slug});
-    }
-    for(var k=0;k<MERIDIANS.length;k++){
-      var m=MERIDIANS[k];
-      var hay3=[m.name,m.english,m.summary].concat(m.themes||[]).join('|').toLowerCase();
-      if(hay3.indexOf(ql)>=0)rs.push({type:'经络',title:m.name,desc:m.summary,href:'#/meridians/'+m.slug});
-    }
-  }
-  var resultsHtml='';
-  if(rs.length){
-    resultsHtml='<div class="cards">';
-    for(var n=0;n<rs.length;n++){
-      resultsHtml+='<a class="card" href="'+rs[n].href+'"><div class="meta">'+esc(rs[n].type)+'</div><h3>'+esc(rs[n].title)+'</h3><p>'+esc(rs[n].desc)+'</p></a>';
-    }
-    resultsHtml+='</div>';
-  }else{
-    resultsHtml='<div class="empty">'+(q?'没有找到匹配的内容，换个关键词试试。':'请输入关键词进行搜索。')+'</div>';
-  }
-  return '<div class="container">'
-    +'<div class="breadcrumb"><a href="#/">首页</a> / 搜索</div>'
-    +'<div class="section-head" style="margin-top:18px"><div class="eyebrow">SEARCH</div><h2>搜索结果'+(q?'："'+esc(q)+'"':'')+'</h2></div>'
-    +'<form id="searchForm" class="search" style="margin-bottom:18px"><input name="q" value="'+esc(q)+'" placeholder="搜索穴位、经络或常见不适" /><button type="submit">搜索</button></form>'
-    +resultsHtml+'</div>';
-}
-
-function viewNotFound(msg){
-  return '<div class="container"><div class="empty" style="margin:60px 0">'+esc(msg||'没有找到该内容。')+'<br/><a class="btn outline" style="margin-top:16px;display:inline-block" href="#/">返回首页</a></div></div>';
-}
-
-/* ===== 路由 ===== */
-function parseHash(){
-  var h=window.location.hash||'';
-  if(h.charAt(0)==='#')h=h.substring(1);
-  if(!h||h==='/')return {path:'/',params:{}};
-  if(h.charAt(0)!=='/')h='/'+h;
-  var qIdx=h.indexOf('?');
-  var path=qIdx>=0?h.substring(0,qIdx):h;
-  var qs=qIdx>=0?h.substring(qIdx+1):'';
-  var params={};
-  if(qs){
-    var pairs=qs.split('&');
-    for(var i=0;i<pairs.length;i++){
-      var p=pairs[i];
-      var eq=p.indexOf('=');
-      var key=decodeURIComponent(eq>=0?p.substring(0,eq):p);
-      var val=eq>=0?decodeURIComponent(p.substring(eq+1)):'';
-      params[key]=val;
-    }
-  }
-  return {path:path,params:params};
-}
-
-function resolveView(){
-  var r=parseHash();
-  var path=r.path;
-  var parts=[];
-  var segs=path.split('/');
-  for(var i=0;i<segs.length;i++){if(segs[i])parts.push(segs[i]);}
-  var top=parts[0]||'';
-  var sub=parts[1]||'';
-  if(!top)return viewHome();
-  if(top==='conditions')return sub?viewConditionDetail(sub):viewConditions();
-  if(top==='points')return sub?viewPointDetail(sub):viewPoints();
-  if(top==='meridians')return sub?viewMeridianDetail(sub):viewMeridians();
-  if(top==='acupressure-guide')return viewGuide();
-  if(top==='safety')return viewSafety();
-  if(top==='disclaimer')return viewDisclaimer();
-  if(top==='search')return viewSearch(r.params.q);
-  return viewNotFound('未知路径：'+path);
-}
-
-function highlightNav(){
-  var r=parseHash();
-  var path=r.path;
-  var links=document.querySelectorAll('#navList a');
-  for(var i=0;i<links.length;i++){
-    var route=links[i].getAttribute('data-route');
-    var active=route==='/'?path==='/':path.indexOf(route)===0;
-    if(active){links[i].className='active';}else{links[i].className='';}
-  }
-}
-
-function attachHandlers(){
-  var hs=document.getElementById('homeSearch');
-  if(hs){
-    hs.onsubmit=function(e){
-      if(e&&e.preventDefault)e.preventDefault();
-      var q=hs.q.value.replace(/^\s+|\s+$/g,'');
-      if(q)window.location.hash='#/search?q='+encodeURIComponent(q);
-      return false;
-    };
-  }
-  var sf=document.getElementById('searchForm');
-  if(sf){
-    sf.onsubmit=function(e){
-      if(e&&e.preventDefault)e.preventDefault();
-      var q=sf.q.value.replace(/^\s+|\s+$/g,'');
-      window.location.hash='#/search?q='+encodeURIComponent(q);
-      return false;
-    };
-  }
-  var pf=document.getElementById('pointFilter');
-  if(pf){
-    pf.oninput=function(){
-      var q=pf.value.replace(/^\s+|\s+$/g,'').toLowerCase();
-      var grid=document.getElementById('pointsGrid');
-      if(!grid)return;
-      var html='';
-      var count=0;
-      for(var i=0;i<POINTS.length;i++){
-        var p=POINTS[i];
-        if(!q){html+=pointCard(p);count++;continue;}
-        var hay=[p.name,p.pinyin,p.code,p.region,p.summary].concat(p.tags||[]).join('|').toLowerCase();
-        if(hay.indexOf(q)>=0){html+=pointCard(p);count++;}
-      }
-      grid.innerHTML=count?html:'<div class="empty" style="grid-column:1/-1">没有匹配的穴位。</div>';
-    };
-  }
-}
-
-function render(){
-  var app=document.getElementById('app');
-  if(!app)return;
-  var html='';
-  try{html=resolveView();}
-  catch(err){
-    var bar=document.getElementById('errbar');
-    if(bar){bar.style.display='block';bar.textContent='渲染错误: '+(err&&err.message||err);}
-    html='<div class="container"><div class="empty" style="margin:60px 0;color:#7a1f1f">页面渲染出错：'+esc(err&&err.message||err)+'<br/><a href="#/" class="btn outline" style="margin-top:16px;display:inline-block">返回首页</a></div></div>';
-  }
-  if(!html||typeof html!=='string'){
-    html='<div class="container"><div class="empty" style="margin:60px 0">页面内容为空。<a href="#/">返回首页</a></div></div>';
-  }
-  app.innerHTML=html;
-  try{window.scrollTo(0,0);}catch(_){}
-  try{highlightNav();}catch(_){}
-  try{attachHandlers();}catch(_){}
-}
-
-/* ===== 启动 ===== */
-function boot(){
-  var y=document.getElementById('year');
-  if(y)y.textContent=String(new Date().getFullYear());
-  if(!window.location.hash){
-    try{window.location.hash='#/';}catch(_){}
-  }
-  if(window.addEventListener){
-    window.addEventListener('hashchange',render,false);
-  }else if(window.attachEvent){
-    window.attachEvent('onhashchange',render);
-  }
-  render();
-}
-
-// 立即启动；脚本放页面底部，DOM 已就绪
-try{boot();}catch(err){
-  var bar=document.getElementById('errbar');
-  if(bar){bar.style.display='block';bar.textContent='启动错误: '+(err&&err.message||err)+(err&&err.stack?'\n'+err.stack:'');}
-}
-
-})();
-</script>
 </body>
 </html>
